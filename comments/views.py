@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
+
 from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Post
 
 from .models import Comment
 from .forms import CommentForm
+
 
 def post_comment(request, post_pk):
     # 先获取被评论的文章，因为后面需要把评论和被评论的文章关联起来。

@@ -23,8 +23,8 @@
     <section class="comment-area">
         <!-- 把友言评论系统代码放到想让评论框显示的地方 -->
         <!-- UY BEGIN -->
-        <div id="uyan_frame"></div>
-        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2134081"></script>
+{#        <div id="uyan_frame"></div>#}
+{#        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2134081"></script>#}
         <!-- UY END -->
         <hr>
         <h3>发表评论</h3>
@@ -73,22 +73,7 @@
 {% block toc %}
     <div class="widget widget-content">
         <h3 class="widget-title">文章目录</h3>
-        <ul>
-            <li>
-                <a href="#">教程特点</a>
-            </li>
-            <li>
-                <a href="#">谁适合这个教程</a>
-            </li>
-            <li>
-                <a href="#">在线预览</a>
-            </li>
-            <li>
-                <a href="#">资源列表</a>
-            </li>
-            <li>
-                <a href="#">获取帮助</a>
-            </li>
-        </ul>
+         <!-- 由于 toc 的值为一段 HTML 文本，所以要使用 safe 标签过滤 -->
+        {{ toc|safe }}
     </div>
 {% endblock toc %}
