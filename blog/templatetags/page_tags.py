@@ -7,12 +7,6 @@ from django.utils.html import format_html
 register = template.Library()
 
 
-# @register.filter
-# def kong_upper(val):
-#     print('val from template:', val)
-#     return val.upper()
-
-
 @register.simple_tag
 def circle_page(curr_page, loop_page):
     offset = abs(curr_page - loop_page)

@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 # from django.http import HttpResponse
+
+
 import markdown
 
 from django.shortcuts import render, get_object_or_404

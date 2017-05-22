@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
 """blogproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
