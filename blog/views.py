@@ -31,6 +31,22 @@ def index(request):
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 
+def full_blog(request):
+    return render(request, 'blog/full-blog.html')
+
+
+def about(request):
+    return render(request, 'blog/about.html')
+
+
+def contact(request):
+    return render(request, 'blog/contact.html')
+
+
+def single(request):
+    return render(request, 'blog/single.html')
+
+
 def archives(request, year, month):
     post_list = Post.objects.filter(created_time__year=year,
                                     created_time__month=month,
@@ -85,25 +101,48 @@ def detail(request, pk):
     # 记得在顶部导入 CommentForm
     form = CommentForm()
     comment_list = post.comment_set.all()
+    post_list = Post.objects.all().order_by('-created_time')
+    paginator = Paginator(post_list, 5)
+    page = request.GET.get('page')
+
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+        post_list = paginator.page(1)
+    except EmptyPage:
+        post_list = paginator.page(paginator.num_pages)
 
     # 将文章、表单、以及文章下的评论列表作为模板变量传给 detail.html 模板，以便渲染相应数据。
     context = {'post': post,
                'toc': md.toc,
                'form': form,
-               'comment_list': comment_list
+               'comment_list': comment_list,
+               'post_list': post_list,
                }
     return render(request, 'blog/detail.html', context=context)
 
 
 def search(request):
-    q = request.GET.get('q')
+    keyword = request.GET.get('searchWords')
     error_msg = ''
 
-    if not q:
+    if not keyword:
         error_msg = '请输入关键词'
         return render(request, 'blog/index.html', {'error_msg': error_msg})
 
-    post_list = Post.objects.filter(title__icontains=q)
-    return render(request, 'blog/results.html', {'error_msg': error_msg,
-                                                 'post_list': post_list})
+    post_list = Post.objects.filter(title__icontains=keyword)
+
+    paginator = Paginator(post_list, 5)
+    page = request.GET.get('page')
+
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+        post_list = paginator.page(1)
+    except EmptyPage:
+        post_list = paginator.page(paginator.num_pages)
+
+    # 将搜索到的内容显示在index.html中
+    return render(request, 'blog/index.html', {'error_msg': error_msg,
+                                               'post_list': post_list})
 
