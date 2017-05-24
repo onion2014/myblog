@@ -9,9 +9,7 @@
     {% for post in post_list %}
         <article class="post post-{{ post.pk }}">
             <header class="entry-header">
-                <h1 class="entry-title">
-                    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                </h1>
+                <h1 class="entry-title">{{ post.title }}</h1>
                <div class="entry-meta">
                   <span class="post-category"><a href="#">{{ post.category.name }}</a></span>
                   <span class="post-date"><a href="#"><time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time></a></span>
