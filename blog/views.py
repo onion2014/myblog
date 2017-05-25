@@ -93,7 +93,6 @@ def detail(request, pk):
     md = markdown.Markdown(extensions=[
         'markdown.extensions.extra',
         'markdown.extensions.codehilite',
-        # 'markdown.extensions.toc',
         TocExtension(slugify=slugify),
     ])
     post.body = md.convert(post.body)
@@ -131,7 +130,6 @@ def search(request):
         return render(request, 'blog/index.html', {'error_msg': error_msg})
 
     post_list = Post.objects.filter(title__icontains=keyword)
-
     paginator = Paginator(post_list, 5)
     page = request.GET.get('page')
 

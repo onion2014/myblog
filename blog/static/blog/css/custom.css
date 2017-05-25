@@ -1,14 +1,13 @@
 /**
  * Table of Contents
  *
- * 1.0 - Google Font
  * 2.0 - General Elements
  * 3.0 - Site Header
- *   3.1 - Logo
- *   3.2 - Main Navigation
- *     3.2.1 - Main Nav CSS 3 Hover Effect
+ * 3.1 - Logo
+ * 3.2 - Main Navigation
+ * 3.2.1 - Main Nav CSS 3 Hover Effect
  * 4.0 - Home/Blog
- *   4.1 - Read More Button CSS 3 style
+ * 4.1 - Read More Button CSS 3 style
  * 5.0 - Widget
  * 6.0 - Footer
  * 7.0 - Header Search Bar
@@ -18,10 +17,6 @@
  * 11.0 - Media Query
  * 12.0 - Comment
  * 13.0 - Pagination
- */
-
-/**
- * 1.0 - Google Font
  */
 
 /**
@@ -103,7 +98,8 @@ img {
     margin-bottom: 40px;
 }
 .content-body{
-    height: calc(100vh - 212px);
+    /*height: calc(100vh - 212px);*/
+    min-height: 745px;
     margin-top: 130px;
 }
 /**
@@ -111,10 +107,11 @@ img {
  */
 
 .site-header {
-    background-color: #FFF;
+    background: rgba(255,255,255,0.85);
+    /*background-color: #fbf2eb;*/
     padding: 25px 20px;
     margin-bottom: 40px;
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #F1F2E9;
     -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     position: fixed;
@@ -221,7 +218,7 @@ img {
 
 
 .post {
-    background: #fff;
+    background: rgba(255,255,255,0.5);
     padding: 0 30px;
     margin-bottom: 30px;
     -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.2);
@@ -352,7 +349,7 @@ img {
  */
 
 .widget {
-    background: #fff;
+    background: rgba(255,255,255,0.5);
     padding: 0 10px 5px;
     margin-bottom: 30px;
     -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.2);
@@ -477,15 +474,15 @@ img {
  */
 
 .site-footer {
-    padding: 0 0 20px 0;
+    padding: 0 0 10px 0;
+    background: #202121;
 }
 
 .copyright {
     text-align: center;
     padding-top: 15px;
     margin: 0;
-    border-top: 1px solid #ddd;
-    color: #333;
+    color: #fff;
     font-size: 16px;
 }
 
@@ -975,31 +972,29 @@ img {
     min-height: 100%;
 }
 @-webkit-keyframes fade {
- 0% { background-color: rgba(3,219,219,.08);}
- 20% { background-color: rgba(115,3,219,.08);}
- 40% { background-color: rgba(219,3,100,.08);}
- 60% { background-color: rgba(219,201,3,.08);}
- 80% { background-color: rgba(24,219,3,.08);}
- 100% { background-color: rgba(3,219,219,.08);}
+ 0% { background: url("../img/bg1.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
+ 33% { background: url("../img/bg2.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
+ 66% { background: url("../img/bg3.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
+ 100% { background: url("../img/bg1.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
 }
 
-@-moz-keyframes fade {
- 0% { background-color: rgba(3,219,219,.08);}
- 20% { background-color: rgba(115,3,219,.08);}
- 40% { background-color: rgba(219,3,100,.08);}
- 60% { background-color: rgba(219,201,3,.08);}
- 80% { background-color: rgba(24,219,3,.08);}
- 100% { background-color: rgba(3,219,219,.08);}
-}
+/*@-moz-keyframes fade {*/
+ /*0% { background-color: rgba(3,219,219,.08);}*/
+ /*20% { background-color: rgba(115,3,219,.08);}*/
+ /*40% { background-color: rgba(219,3,100,.08);}*/
+ /*60% { background-color: rgba(219,201,3,.08);}*/
+ /*80% { background-color: rgba(24,219,3,.08);}*/
+ /*100% { background-color: rgba(3,219,219,.08);}*/
+/*}*/
 
-@-ms-keyframes fade {
- 0% { background-color: rgba(3,219,219,.08);}
- 20% { background-color: rgba(115,3,219,.08);}
- 40% { background-color: rgba(219,3,100,.08);}
- 60% { background-color: rgba(219,201,3,.08);}
- 80% { background-color: rgba(24,219,3,.08);}
- 100% { background-color: rgba(3,219,219,.08);}
-}
+/*@-ms-keyframes fade {*/
+ /*0% { background-color: rgba(3,219,219,.08);}*/
+ /*20% { background-color: rgba(115,3,219,.08);}*/
+ /*40% { background-color: rgba(219,3,100,.08);}*/
+ /*60% { background-color: rgba(219,201,3,.08);}*/
+ /*80% { background-color: rgba(24,219,3,.08);}*/
+ /*100% { background-color: rgba(3,219,219,.08);}*/
+/*}*/
 /**
  *覆盖bootstrap个别样式
  */
@@ -1009,12 +1004,18 @@ img {
     }
 }
 
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
     background-color: #3285e1;
     border-color: #3285e1;
 }
-.pagination>li>a, .pagination>li>span {
+.pagination>li>a {
     color: #3285e1;
+    background: rgba(255,255,255,0.5);
 }
 .pagination{
     margin: 0 0 30px;
