@@ -42,13 +42,16 @@ b {
 
 a {
     color: #333;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 a:hover, a:active {
     text-decoration: none;
     color: #3285e1;
-    -webkit-transition: color 0.4s linear;
-    transition: color 0.4s linear;
+
+    /*-webkit-transition: color 0.4s linear;*/
+    /*transition: color 0.4s linear;*/
 }
 
 ::selection {
@@ -108,12 +111,10 @@ img {
 
 .site-header {
     background: rgba(255,255,255,0.85);
-    /*background-color: #fbf2eb;*/
-    padding: 25px 20px;
+    padding: 20px 20px;
     margin-bottom: 40px;
-    border-bottom: 1px solid #F1F2E9;
-    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 6px #13c5f8;
+    box-shadow: 0 0 6px #13c5f8;
     position: fixed;
     left: 0;
     right: 0;
@@ -216,17 +217,23 @@ img {
  * 4.0 - Home/Blog
  */
 
-
 .post {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.6);
     padding: 0 30px;
     margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,0);
     -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
-
+.post:hover{
+    border: 1px solid #ff6700;
+    /*-webkit-box-shadow: 0 1px 6px #13c5f8;
+    box-shadow: 0 1px 6px #13c5f8;*/
+}
 .entry-title {
     text-align: center;
     font-size: 1.9em;
@@ -972,10 +979,10 @@ img {
     min-height: 100%;
 }
 @-webkit-keyframes fade {
- 0% { background: url("../img/bg1.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
- 33% { background: url("../img/bg2.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
- 66% { background: url("../img/bg3.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
- 100% { background: url("../img/bg1.jpg") center center no-repeat;background-size: cover; background-attachment:fixed}
+ 0% { background: url("../img/bg1.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
+ 33% { background: url("../img/bg2.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
+ 66% { background: url("../img/bg3.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
+ 100% { background: url("../img/bg1.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
 }
 
 /*@-moz-keyframes fade {*/
@@ -1016,6 +1023,9 @@ img {
 .pagination>li>a {
     color: #3285e1;
     background: rgba(255,255,255,0.5);
+}
+.pagination>li>a:hover {
+    background: rgba(255,255,255,1);
 }
 .pagination{
     margin: 0 0 30px;
