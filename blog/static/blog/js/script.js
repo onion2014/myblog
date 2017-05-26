@@ -150,3 +150,19 @@ if ( typeof define === 'function' && define.amd ) {
     triggerBttn.addEventListener( 'click', toggleOverlay );
     closeBttn.addEventListener( 'click', toggleOverlay );
 })();
+
+
+//回到顶部
+function goTop(){
+	var gotop=$(".m-gotop");
+    gotop.click(function(){
+		$("html,body").animate({"scrollTop":0},200)
+	})
+	$(window).scroll(function(){
+		if($(this).scrollTop()>0){
+			gotop.fadeIn();
+		}else{
+			gotop.fadeOut();
+		}
+	})
+}

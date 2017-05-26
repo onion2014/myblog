@@ -49,9 +49,6 @@ a {
 a:hover, a:active {
     text-decoration: none;
     color: #3285e1;
-
-    /*-webkit-transition: color 0.4s linear;*/
-    /*transition: color 0.4s linear;*/
 }
 
 ::selection {
@@ -453,12 +450,25 @@ img {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+/*.widget-tag-cloud ul li:hover{*/
+    /*border: 1px solid #3285e1;*/
+    /*background: #3285e1;*/
+/*}*/
+.widget-tag-cloud ul li a{
+    display: inline-block;
     padding: 3px 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    -webkit-transition: border 0.5s, background 0.5s, color 0.5s;
+    transition: border 0.5s, background 0.5s, color 0.5s;
 }
-
+.widget-tag-cloud ul li a:hover{
+    color: #fff;
+    border: 1px solid #3285e1;
+    background: #3285e1;
+}
 .widget-content ul ul {
     margin-top: 10px;
 }
@@ -967,7 +977,41 @@ img {
 .current a {
     color: red;
 }
+/**
+ * go top
+ */
+.m-gotop {
+	position: fixed;
+	right: 20px;
+	bottom: 90px;
+	z-index: 100;
+	display: none;
+}
 
+.m-gotop a {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: rgba(255,255,255,0.6);
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	box-sizing: border-box;
+    -webkit-transition: border 0.5s, background 0.5s, color 0.5s;
+    transition: border 0.5s, background 0.5s, color 0.5s;
+	text-align: center;
+}
+.m-gotop a i {
+	vertical-align: -23px;
+    font-size: 40px;
+}
+
+.m-gotop a:hover {
+	background: #3285e1;
+	color: #fff;
+}
+/*.m-gotop a:hover i {
+	color: #fff;
+}*/
 /**
  * 14.0 - body-bg
  */
@@ -1022,11 +1066,16 @@ img {
 }
 .pagination>li>a {
     color: #3285e1;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.6);
 }
 .pagination>li>a:hover {
     background: rgba(255,255,255,1);
 }
 .pagination{
     margin: 0 0 30px;
+}
+
+/*修改字体图标*/
+#header-search-box .fa-search{
+	font-size: 22px;
 }
