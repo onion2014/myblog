@@ -5,13 +5,13 @@ $("#search-menu").click(function(e){
     e.preventDefault();
 
     var val = $('#search-icon');
-    if(val.hasClass('ion-ios-search-strong')){
-        val.addClass('ion-ios-close-empty');
-        val.removeClass('ion-ios-search-strong');
+    if(val.hasClass('icon-sousuo_sousuo')){
+        val.addClass('icon-cha');
+        val.removeClass('icon-sousuo_sousuo');
     }
     else{
-         val.removeClass('ion-ios-close-empty');
-        val.addClass('ion-ios-search-strong');
+         val.removeClass('icon-cha');
+        val.addClass('icon-sousuo_sousuo');
     }
     
     

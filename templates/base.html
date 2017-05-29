@@ -13,7 +13,8 @@
 
         <!-- css -->
         <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'blog/css/ionicons.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/iconfont.css' %}">
+        <!--<link rel="stylesheet" href="{% static 'blog/css/ionicons.css' %}">-->
         <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
         <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
 
@@ -47,14 +48,13 @@
                         </nav>
                         <div id="header-search-box">
                             <a id="search-menu" href="#">
-                                 <span id="search-icon" class="ion-ios-search-strong"></span>
-                                <!--<i id="search-icon" class="fa fa-search"></i>-->
+                                <i id="search-icon" class="iconfont icon-sousuo_sousuo"></i>
                             </a>
                             <div id="search-form" class="search-form">
                                 <form role="search" method="get" id="searchform" action="{% url 'blog:search' %}">
                                     {% csrf_token %}
                                     <input type="search" name="searchWords" placeholder="搜索" required>
-                                    <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                                    <button type="submit"><i class="iconfont icon-sousuo"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -78,6 +78,7 @@
                             <ul>
                                 {% for post in recent_post_list %}
                                 <li>
+                                    <i class="iconfont icon-jiantouright"></i>
                                     <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                                 </li>
                                 {% empty %}
@@ -91,6 +92,7 @@
                             <ul>
                                 {% for date in date_list %}
                                 <li>
+                                    <i class="iconfont icon-guidang"></i>
                                     <a href="{% url 'blog:archives' date.year date.month %}">
                                         {{ date.year }} 年 {{ date.month }} 月
                                     </a>
@@ -107,6 +109,7 @@
                             <ul>
                                 {% for category in category_list %}
                                 <li>
+                                    <i class="iconfont icon-fenlei"></i>
                                     <a href="{% url 'blog:category' category.pk %}">{{ category.name }} <span class="post-count">({{ category.num_posts }})</span></a>
                                 </li>
                                 {% empty %}
@@ -150,9 +153,6 @@
                                 </li>
                             </ul>
                         </div>
-                        {% comment %}<div class="rss">
-                            <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
-                        </div>{% endcomment %}
                     </aside>
                 </div>
             </div>
@@ -169,7 +169,7 @@
             </footer>
         <!-- Mobile Menu -->
         <div class="overlay overlay-hugeinc">
-            <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+            <button type="button" class="overlay-close"><i class="iconfont icon-cha"></i></button>
             <nav>
                 <ul>
                     <li><a href="{% url 'blog:index' %}">首页</a></li>
@@ -181,9 +181,8 @@
         </div>
         <!-- go top -->
         <div class="m-gotop">
-            <a href="javascript:;" title="返回顶部"><i class="ion-arrow-up-a"></i></a>
+            <a href="javascript:;" title="返回顶部"><i class="iconfont icon-jiantou"></i></a>
         </div>
-        <!-- other content -->
         <!-- js -->
         <script src="{% static 'blog/js/jquery-2.1.3.min.js' %}"></script>
         <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>

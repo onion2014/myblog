@@ -10,16 +10,11 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	    <!-- css -->
-        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-		<link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/iconfont.css' %}">
         <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
         <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
-
-	    <!-- js -->
-        <script src="{% static 'blog/js/jquery-2.1.3.min.js' %}"></script>
-        <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'blog/js/pace.min.js' %}"></script>
-        <script src="{% static 'blog/js/custom.min.js' %}"></script>
+        
 	</head>
 
 	<body id="page">
@@ -28,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-5 col-xs-8">
                         <div class="logo">
-                            <h1><a href="{% url 'blog:index' %}"><b>牧心的博客</b></a></h1>
+                            <h1><a href="{% url 'blog:index' %}">牧心的博客</a></h1>
                         </div>
                     </div><!-- col-md-4 -->
                     <div class="col-md-8 col-sm-7 col-xs-4">
@@ -49,11 +44,14 @@
                             </div><!-- /.navbar-collapse -->
                         </nav>
                         <div id="header-search-box">
-                            <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+                             <a id="search-menu" href="#">
+                                <i id="search-icon" class="iconfont icon-sousuo_sousuo"></i>
+                            </a>
                             <div id="search-form" class="search-form">
-                                <form role="search" method="get" id="searchform" action="#">
-                                    <input type="search" placeholder="Search" required>
-                                    <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                                <form role="search" method="get" id="searchform" action="{% url 'blog:search' %}">
+                                    {% csrf_token %}
+                                    <input type="search" name="searchWords" placeholder="搜索" required>
+                                    <button type="submit"><i class="iconfont icon-sousuo"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -76,7 +74,7 @@
 											<input type="email" name="email" placeholder="Email" required>
 											<input type="text" name="subject" placeholder="Subject" required>
 											<textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-											<button class="btn-send btn-5 btn-5b ion-ios-paperplane"><span>Drop Me a Line</span></button>
+											<button class="btn-send btn-5 btn-5b "><i class="iconfont icon-iconfontfeiji"></i><span>Drop Me a Line</span></button>
 										</div>
 									</div>	<!-- row -->
 								</form>
@@ -98,7 +96,7 @@
         </footer>
 		<!-- Mobile Menu -->
 		<div class="overlay overlay-hugeinc">
-			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<button type="button" class="overlay-close"><i class="iconfont icon-cha"></i></button>
 			<nav>
 				<ul>
 					<li><a href="{% url 'blog:index' %}">首页</a></li>
@@ -108,8 +106,20 @@
 				</ul>
 			</nav>
 		</div>
-
+		<!-- go top -->
+        <div class="m-gotop">
+            <a href="javascript:;" title="返回顶部"><i class="iconfont icon-jiantou"></i></a>
+        </div>
+        <!-- js -->
+        <script src="{% static 'blog/js/jquery-2.1.3.min.js' %}"></script>
+        <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'blog/js/pace.min.js' %}"></script>
+        <script src="{% static 'blog/js/custom.min.js' %}"></script>
 		<script src="{% static 'blog/js/script.js' %}"></script>
-		
+		<script>
+            $(function(){
+                goTop();
+            });
+        </script>
 	</body>
 </html>

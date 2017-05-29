@@ -382,9 +382,7 @@ img {
     padding-bottom: 10px;
 }
 
-.widget-recent-posts ul li::before {
-    content: '\f3d3';
-    font-family: "Ionicons";
+.widget-recent-posts ul li i {
     position: absolute;
     left: -17px;
     top: 1px;
@@ -405,9 +403,7 @@ img {
     padding-bottom: 10px;
 }
 
-.widget-archives ul li::before {
-    content: '\f3f3';
-    font-family: "Ionicons";
+.widget-archives ul li i {
     position: absolute;
     left: -25px;
     top: 1px;
@@ -428,9 +424,7 @@ img {
     padding-bottom: 10px;
 }
 
-.widget-category ul li::before {
-    content: '\f3fe';
-    font-family: "Ionicons";
+.widget-category ul li i {
     position: absolute;
     left: -25px;
     top: 1px;
@@ -477,14 +471,6 @@ img {
     margin-bottom: 10px;
 }
 
-.rss {
-    font-size: 21px;
-    margin-top: 30px;
-}
-
-.rss a {
-    color: #444;
-}
 
 /**
  * 6.0 - Footer
@@ -509,7 +495,7 @@ img {
 
 #header-search-box {
     position: absolute;
-    right: 15px;
+    right: 10px;
     top: 1px;
 }
 
@@ -518,14 +504,18 @@ img {
     width: 25%;
     position: absolute;
     min-width: 400px;
-    right: 26px;
+    right: 32px;
     top: 1px;
 }
 
-#search-menu span {
-    font-size: 28px;
+#search-menu .icon-sousuo_sousuo {
+    font-size: 30px;
+	font-weight: bold;
 }
-
+#search-menu .icon-cha {
+    font-size: 30px;
+	font-weight: bold;
+}
 #searchform {
     position: relative;
     -webkit-border-radius: 3px;
@@ -551,6 +541,8 @@ img {
     right: 4px;
     top: 3px;
     width: 30px;
+    height: 30px;
+	line-height: 30px;
     z-index: 999;
     background: transparent;
     border: 0;
@@ -559,8 +551,9 @@ img {
 #searchform button:hover{
     color: #3285e1;
 }
-#searchform button span {
-    font-size: 22px;
+#searchform button i {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #search-menu span.ion-ios-close-empty {
@@ -807,7 +800,7 @@ img {
     backface-visibility: hidden;
 }
 
-.btn-5:before {
+.btn-5 i{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -818,7 +811,7 @@ img {
     transition: all 0.3s;
 }
 
-.btn-5:active:before {
+.btn-5:active i {
     color: #703b87;
 }
 
@@ -829,12 +822,12 @@ img {
     transform: translateX(200%);
 }
 
-.btn-5b:before {
+.btn-5b i {
     left: -100%;
     top: 0;
 }
 
-.btn-5b:hover:before {
+.btn-5b:hover i{
     left: 0;
 }
 
@@ -1078,4 +1071,9 @@ img {
 /*修改字体图标*/
 #header-search-box .fa-search{
 	font-size: 22px;
+}
+a:focus,
+a:hover,
+a:active {
+	outline: none;
 }
