@@ -587,9 +587,9 @@ img {
     z-index: 100;
 }
 
-.overlay-hugeinc.open .ion-ios-close-empty {
+.overlay-hugeinc.open .icon-cha {
     color: #000;
-    font-size: 50px;
+    font-size: 36px;
 }
 
 .overlay nav {
@@ -619,6 +619,7 @@ img {
 }
 
 .overlay ul li a {
+    font-size: 30px;
     font-weight: 300;
     display: block;
     -webkit-transition: color 0.2s;
@@ -642,6 +643,7 @@ img {
     visibility: visible;
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
+    z-index: 100;
 }
 
 .overlay-hugeinc nav {
