@@ -68,10 +68,10 @@ p {
     letter-spacing: 0.01em;
 }
 
-#single p,
+/*#single p,
 #page p {
     margin-bottom: 25px;
-}
+}*/
 
 .page-title {
     text-align: center;
@@ -99,7 +99,7 @@ img {
 }
 .content-body{
     /*height: calc(100vh - 212px);*/
-    min-height: 745px;
+    min-height: 768px;
     margin-top: 130px;
 }
 /**
@@ -171,11 +171,11 @@ img {
 .navbar-toggle {
     border: 0;
     padding: 0;
-    margin-right: 25px;
+    margin-right: 35px;
 }
 
-.navbar-toggle span {
-    font-size: 2em;
+.navbar-toggle i {
+    font-size: 26px;
     color: #000;
 }
 
@@ -471,20 +471,19 @@ img {
     margin-bottom: 10px;
 }
 
-
 /**
  * 6.0 - Footer
  */
 
 .site-footer {
-    padding: 0 0 10px 0;
     background: #202121;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 
 .copyright {
     text-align: center;
-    padding-top: 15px;
-    margin: 0;
+    margin: 15px 0;
     color: #fff;
     font-size: 16px;
 }
@@ -849,7 +848,7 @@ img {
 @media (max-width: 767px) {
     #header-search-box {
         right: 20px;
-        top: 9px;
+        top: 8px;
     }
 
     .main-nav {
@@ -860,8 +859,9 @@ img {
         display: none;
     }
 
-    .btn-5b:before {
+    .btn-5b i {
         left: 0;
+        color: #fff;
     }
 }
 
@@ -872,7 +872,7 @@ img {
     }
 
     .post {
-        background: #fff;
+        background: rgba(255,255,255,0.6);
         padding: 0 10px 0;
     }
 
@@ -895,7 +895,7 @@ img {
 
 /**
  * 12.0 - Comment
- */
+ 
 .comment-area {
     padding: 0 30px 0;
 }
@@ -947,7 +947,7 @@ img {
 .comment-item .text {
     padding-top: 5px;
     font-size: 16px;
-}
+}*/
 
 /**
  * 13.0 - Pagination
@@ -994,8 +994,8 @@ img {
 	text-align: center;
 }
 .m-gotop a i {
-	vertical-align: -23px;
-    font-size: 40px;
+	vertical-align: -28px;
+    font-size: 34px;
 }
 
 .m-gotop a:hover {
@@ -1039,6 +1039,7 @@ img {
  /*80% { background-color: rgba(24,219,3,.08);}*/
  /*100% { background-color: rgba(3,219,219,.08);}*/
 /*}*/
+
 /**
  *覆盖bootstrap个别样式
  */
@@ -1076,4 +1077,39 @@ a:focus,
 a:hover,
 a:active {
 	outline: none;
+    text-decoration: none;
+}
+
+/*动画*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Mon May 29 12:40:58 2017
+Created by FontForge 20120731 at Fri Jun  2 12:19:03 2017
  By admin
 </metadata>
 <defs>
@@ -53,6 +53,8 @@ d="M217 135l544 544l46 -46l-544 -544zM761 89l-544 544l46 46l544 -544z" />
 d="M809 389q1 -4 -3.5 -16t-8.5 -22l-5 -10l-175 -369q-13 -21 -32 -26q-35 -11 -65 10q-23 17 -29 37q-7 22 -1 41q5 13 165 345v0q2 4 2 8t-2 7l-1 2q-159 331 -164 344q-6 19 1 40q6 21 29 38q30 21 65 10q8 -2 16 -9t12 -12l4 -5l175 -369q17 -31 17 -43v-1zM511 388
 q0 -17 -12 -40q-5 -10 -48 -99.5t-83.5 -174.5t-40.5 -86q-1 -1 -3.5 -4t-9 -7.5t-12.5 -4.5q-18 1 -29 10t-10 27q0 4 1.5 9t2.5 8l1 3l165 348q2 5 2 10t-1 8l-1 3l-165 348q-5 11 -5 20q-1 18 10 27t29 10q6 0 12.5 -4t9.5 -8l3 -4q161 -338 172 -360q6 -10 9 -20t3 -15
 v-4v0z" />
+    <glyph glyph-name="menu" unicode="&#xe615;" 
+d="M128 768v-128h832v128h-832zM128 448v-128h832v128h-832zM128 128v-128h832v128h-832z" />
     <glyph glyph-name="jiantou" unicode="&#xe60c;" 
 d="M512 868l-398 -569h170v-114h456v114h170zM284 14h456v114h-456v-114zM284 -100h456v57h-456v-57z" />
     <glyph glyph-name="tuite" unicode="&#xe673;" 
