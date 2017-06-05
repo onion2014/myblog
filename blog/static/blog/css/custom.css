@@ -1,6 +1,4 @@
 /**
- * Table of Contents
- *
  * 2.0 - General Elements
  * 3.0 - Site Header
  * 3.1 - Logo
@@ -117,6 +115,7 @@ img {
     right: 0;
     top: 0;
     z-index: 100;
+    overflow: hidden;
 }
 
 
@@ -479,6 +478,7 @@ img {
     background: #202121;
     opacity: 0.8;
     filter: alpha(opacity=80);
+    overflow: hidden;
 }
 
 .copyright {
@@ -1004,24 +1004,20 @@ img {
 	background: #3285e1;
 	color: #fff;
 }
-/*.m-gotop a:hover i {
-	color: #fff;
-}*/
 /**
  * 14.0 - body-bg
  */
 #wrapper {
-    -webkit-animation: fade 15s infinite;
-    -moz-animation: fade 15s infinite;
-    -ms-animation: fade 15s infinite;
+    -webkit-animation: fade 20s infinite;
+    animation: fade 20s infinite;
     width: 100%;
     min-height: 100%;
 }
 @-webkit-keyframes fade {
- 0% { background: url("../img/bg1.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
- 33% { background: url("../img/bg2.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
- 66% { background: url("../img/bg3.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
- 100% { background: url("../img/bg1.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
+ 0% { background: url("../img/bg-01.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
+ 33% { background: url("../img/bg-02.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
+ 66% { background: url("../img/bg-03.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
+ 100% { background: url("../img/bg-01.jpg") center center no-repeat; background-size: cover; background-attachment:fixed}
 }
 
 /*@-moz-keyframes fade {*/
@@ -1082,7 +1078,49 @@ a:active {
     text-decoration: none;
 }
 
-/*动画*/
+/*动画效果*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.container{
+	overflow: hidden;
+}
+.wow{
+	visibility:hidden;
+	overflow: hidden;
+}
+@-webkit-keyframes fadeInRight {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.fadeInRight {
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+}
+
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1114,4 +1152,37 @@ a:active {
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
 }
