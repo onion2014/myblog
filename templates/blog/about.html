@@ -20,7 +20,7 @@
 	<body id="page">
 
         <header class="site-header">
-            <div class="container">
+            <div class="container fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
                     <div class="col-md-4 col-sm-5 col-xs-8">
                         <div class="logo">
@@ -61,24 +61,18 @@
             </div>
         </header>
         <div class="content-body">
-            <div class="container">
+            <div class="container fadeInLeft animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
                     <main class="col-md-12">
                         <article class="post">
                             <h1 class="page-title">About Me</h1>
                             <div class="entry-content clearfix">
-                                <figure class="img-responsive-center">
+                                <div class="img-responsive-center">
                                     <img class="img-responsive" src="{% static 'blog/img/me.jpg' %}" alt="Developer Image">
-                                </figure>
-                                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-                                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-                                <div class="height-40px"></div>
-                                <h2 class="title text-center">Social</h2>
-                                <ul class="social">
-                                    <li class="facebook"><a href="#"><i class="iconfont icon-facebook"></i></a></li>
-                                    <li class="twitter"><a href="#"><i class="iconfont icon-tuite"></i></a></li>
-                                    <li class="google-plus"><a href="#"><i class="iconfont icon-google"></i></a></li>
-                                </ul>
+                                </div>
+                                <div class="item-cont">
+                                    <p>增加中。。。</p>
+                                </div>
                             </div>
                         </article>
                     </main>
@@ -87,7 +81,7 @@
         </div>
 
         <footer class="site-footer">
-            <div class="container">
+            <div class="container wow fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
                     <div class="col-md-12">
                         <p class="copyright">&copy 2017 牧心的博客</p>
@@ -117,6 +111,14 @@
         <script src="{% static 'blog/js/pace.min.js' %}"></script>
         <script src="{% static 'blog/js/custom.min.js' %}"></script>
 		<script src="{% static 'blog/js/script.js' %}"></script>
+        <!--[if (gte IE 9)|(!IE)]> -->
+	    <script src="{% static 'blog/js/wow.min.js' %}" type="text/javascript" charset="utf-8"></script>
+	    <!-- <![endif]-->
+	    <!--[if (gte IE 9)|(!IE)]> -->
+	    <script>
+	        new WOW().init();
+	    </script>
+	    <!-- <![endif]-->
 		<script>
             $(function(){
                 goTop();

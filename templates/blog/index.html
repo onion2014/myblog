@@ -11,17 +11,35 @@
             <header class="entry-header">
                 <h1 class="entry-title">{{ post.title }}</h1>
                <div class="entry-meta">
-                  <span class="post-category"><a href="#">{{ post.category.name }}</a></span>
-                  <span class="post-date"><a href="#"><time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time></a></span>
-                  <span class="post-author"><a href="#">{{ post.author }}</a></span>
-                  <span class="comments-link"><a href="#">{{ post.comment_set.count }} 评论</a></span>
-                  <span class="views-count"><a href="#">{{ post.views }} 阅读</a></span>
+                  <span class="post-category">
+                      <i class="iconfont icon-fenlei"></i>
+                      <a href="#">{{ post.category.name }}</a>
+                  </span>
+                  <span class="post-date">
+                      <i class="iconfont icon-shijian"></i>
+                      <a href="#">
+                          <time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time>
+                      </a>
+                  </span>
+                  <span class="post-author">
+                      <i class="iconfont icon-zuozhe"></i>
+                      <a href="#">{{ post.author }}</a>
+                  </span>
+                  <span class="comments-link">
+                      <i class="iconfont icon-pinglun"></i>
+                      <a href="#">{{ post.comment_set.count }} 评论</a>
+                  </span>
+                  <span class="views-count">
+                      <i class="iconfont icon-yuedu"></i>
+                      <a href="#">{{ post.views }} 阅读</a>
+
+                  </span>
                </div>
             </header>
             <div class="entry-content clearfix">
                 <p>{{ post.excerpt }}</p>
                 <div class="read-more cl-effect-14">
-                    <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
+                    <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <i class="iconfont icon-6icon"></i></a>
                 </div>
             </div>
         </article>
@@ -49,7 +67,7 @@
           {% if post_list.has_previous %}
               <li>
                   <a href="?page={{ post_list.previous_page_number }}" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
+                      <i aria-hidden="true" class="iconfont icon-prev-arrow"></i>
                   </a>
               </li>
           {% endif %}
@@ -61,7 +79,7 @@
         {% if post_list.has_next %}
             <li>
               <a href="?page={{ post_list.next_page_number }}" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
+                  <i aria-hidden="true" class="iconfont icon-next-arrow"></i>
               </a>
             </li>
             {% endif %}

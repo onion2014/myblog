@@ -15,9 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before { content: "\e608"; }
-
-.icon-fenlei:before { content: "\e66f"; }
+.icon-fenlei:before { content: "\e604"; }
 
 .icon-sousuo:before { content: "\e63f"; }
 
@@ -44,3 +42,15 @@
 .icon-tuite:before { content: "\e673"; }
 
 .icon-menu:before { content: "\e615"; }
+
+.icon-shijian:before { content: "\e79b"; }
+
+.icon-yuedu:before { content: "\e646"; }
+
+.icon-zuozhe:before { content: "\e652"; }
+
+.icon-pinglun:before { content: "\e603"; }
+
+.icon-prev-arrow:before { content: "\e60d"; }
+
+.icon-next-arrow:before { content: "\e60e"; }

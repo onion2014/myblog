@@ -7,9 +7,10 @@ import markdown
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 from django.utils.text import slugify
+from django.views.generic import ListView
 from markdown.extensions.toc import TocExtension
 from comments.forms import CommentForm
-from .models import Post, Category
+from .models import Post, Category, Tag
 
 
 def index(request):
@@ -30,9 +31,24 @@ def index(request):
     # 调用render函数，根据传入的参数来构造HttpResponse
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
+# class IndexView(ListView):
+#     model = Post
+#     template_name = 'blog/index.html'
+#     context_object_name = 'post_list'
+
 
 def full_blog(request):
-    return render(request, 'blog/full-blog.html')
+    post_list = Post.objects.all().order_by('-created_time')
+    paginator = Paginator(post_list, 5)
+    page = request.GET.get('page')
+
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+        post_list = paginator.page(1)
+    except EmptyPage:
+        post_list = paginator.page(paginator.num_pages)
+    return render(request, 'blog/full-blog.html', context={'post_list': post_list})
 
 
 def about(request):
@@ -43,8 +59,8 @@ def contact(request):
     return render(request, 'blog/contact.html')
 
 
-def single(request):
-    return render(request, 'blog/single.html')
+# def single(request):
+#     return render(request, 'blog/single.html')
 
 
 def archives(request, year, month):
@@ -144,3 +160,25 @@ def search(request):
     return render(request, 'blog/index.html', {'error_msg': error_msg,
                                                'post_list': post_list})
 
+# def tag_tag(request, pk):
+#     tag_1 = get_object_or_404(Tag, pk=pk)
+#     post_list = Post.objects.filter(tags=tag_1)
+#     return render(request, 'blog/index.html', context={'post_list': post_list})
+
+# class TagView(ListView):
+#     model = Post
+#     template_name = 'blog/index.html'
+#     context_object_name = 'post_list'
+#
+#     def get_queryset(self):
+#         tag = get_object_or_404(Tag, pk=self.kwargs.get('pk'))
+#         return super(TagView, self).get_queryset().filter(tags=tag)
+
+class TagView(ListView):
+    model = Post
+    template_name = 'blog/index.html'
+    context_object_name = 'post_list'
+
+    def get_queryset(self):
+        tag = get_object_or_404(Tag, pk=self.kwargs.get('pk'))
+        return super(TagView, self).get_queryset().filter(tags=tag)

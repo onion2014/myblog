@@ -1,4 +1,6 @@
-{%  load staticfiles %}
+{% load staticfiles %}
+
+{% load page_tags %}
 
 <!DOCTYPE html>
 <html id="wrapper">
@@ -19,7 +21,7 @@
 
 	<body>
         <header class="site-header">
-            <div class="container">
+            <div class="container fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
                     <div class="col-md-4 col-sm-5 col-xs-8">
                         <div class="logo">
@@ -63,105 +65,85 @@
          <div class="content-body">
             <div class="container">
                 <div class="row">
-                    <main class="col-md-12">
-                        <article class="post post-1">
-                            <header class="entry-header">
-                                <h1 class="entry-title">
-                                    <a href="{% url 'blog:single' %}">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>
-                                </h1>
-                                <div class="entry-meta">
-                                    <span class="post-category"><a href="#">Web Design</a></span>
+                    <main class="col-md-12 fadeInLeft animated" >
+                        {% block main %}
+                            {% if error_msg %}
+                            <p>{{ error_msg }}</p>
+                            {% endif %}
+                            {% for post in post_list %}
+                                <article class="post post-{{ post.pk }}">
+                                    <header class="entry-header">
+                                        <h1 class="entry-title">{{ post.title }}</h1>
+                                       <div class="entry-meta">
+                                          <span class="post-category">
+                                              <i class="iconfont icon-fenlei"></i>
+                                              <a href="#">{{ post.category.name }}</a>
+                                          </span>
+                                          <span class="post-date">
+                                              <i class="iconfont icon-shijian"></i>
+                                              <a href="#">
+                                                  <time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time>
+                                              </a>
+                                          </span>
+                                          <span class="post-author">
+                                              <i class="iconfont icon-zuozhe"></i>
+                                              <a href="#">{{ post.author }}</a>
+                                          </span>
+                                          <span class="comments-link">
+                                              <i class="iconfont icon-pinglun"></i>
+                                              <a href="#">{{ post.comment_set.count }} 评论</a>
+                                          </span>
+                                          <span class="views-count">
+                                              <i class="iconfont icon-yuedu"></i>
+                                              <a href="#">{{ post.views }} 阅读</a>
 
-                                    <span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">February 2, 2013</time></a></span>
+                                          </span>
+                                       </div>
+                                    </header>
+                                    <div class="entry-content clearfix">
+                                        <p>{{ post.excerpt }}</p>
+                                        <div class="read-more cl-effect-14">
+                                            <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <i class="iconfont icon-6icon"></i></a>
+                                        </div>
+                                    </div>
+                                </article>
+                            {% empty %}
+                                <div class="no-post">暂时还没有发布的文章！</div>
+                            {% endfor %}
 
-                                    <span class="post-author"><a href="#">Albert Einstein</a></span>
+                            <!-- 分页-->
+                            <nav aria-label="Page navigation">
+                              <ul class="pagination">
+                                  {% if post_list.has_previous %}
+                                      <li>
+                                          <a href="?page={{ post_list.previous_page_number }}" aria-label="Previous">
+                                              <i aria-hidden="true" class="iconfont icon-prev-arrow"></i>
+                                          </a>
+                                      </li>
+                                  {% endif %}
 
-                                    <span class="comments-link"><a href="">4 Comments</a></span>
-                                </div>
-                            </header>
-                            <div class="entry-content clearfix">
-                                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-                                <div class="read-more cl-effect-14">
-                                    <a href="#" class="more-link">Continue reading <span class="meta-nav">→</span></a>
-                                </div>
-                            </div>
-                        </article>
+                                {%  for pg in post_list.paginator.page_range %}
+                                    {% circle_page post_list.number pg %}
+                                {% endfor %}
 
-                        <article class="post post-2">
-                            <header class="entry-header">
-                                <h1 class="entry-title">
-                                    <a href="{% url 'blog:single' %}">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>
-                                </h1>
-                                <div class="entry-meta">
-                                    <span class="post-category"><a href="#">Web Design</a></span>
+                                {% if post_list.has_next %}
+                                    <li>
+                                      <a href="?page={{ post_list.next_page_number }}" aria-label="Next">
+                                          <i aria-hidden="true" class="iconfont icon-next-arrow"></i>
+                                      </a>
+                                    </li>
+                                    {% endif %}
+                              </ul>
+                            </nav>
 
-                                    <span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">February 2, 2013</time></a></span>
-
-                                    <span class="post-author"><a href="#">Albert Einstein</a></span>
-
-                                    <span class="comments-link"><a href="#">4 Comments</a></span>
-                                </div>
-                            </header>
-                            <div class="entry-content clearfix">
-                                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-                                <div class="read-more cl-effect-14">
-                                    <a href="#" class="more-link">Continue reading <span class="meta-nav">→</span></a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="post post-3">
-                            <header class="entry-header">
-                                <h1 class="entry-title">
-                                    <a href="{% url 'blog:single' %}">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>
-                                </h1>
-                                <div class="entry-meta">
-                                    <span class="post-category"><a href="#" rel="category tag">Web Design</a></span>
-
-                                    <span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">February 2, 2013</time></a></span>
-
-                                    <span class="post-author"><a href="#">Albert Einstein</a></span>
-
-                                    <span class="comments-link"><a href="#">4 Comments</a></span>
-                                </div>
-                            </header>
-                            <div class="entry-content clearfix">
-                                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-                                <div class="read-more cl-effect-14">
-                                    <a href="#" class="more-link">Continue reading <span class="meta-nav">→</span></a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="post post-4">
-                            <header class="entry-header">
-                                <h1 class="entry-title">
-                                    <a href="{% url 'blog:single' %}">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>
-                                </h1>
-                                <div class="entry-meta">
-                                    <span class="post-category"><a href="#" rel="category tag">Web Design</a></span>
-
-                                    <span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">February 2, 2013</time></a></span>
-
-                                    <span class="post-author"><a href="#">Albert Einstein</a></span>
-
-                                    <span class="comments-link"><a href="#">4 Comments</a></span>
-                                </div>
-                            </header>
-                            <div class="entry-content clearfix">
-                                <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-                                <div class="read-more cl-effect-14">
-                                    <a href="#" class="more-link">Continue reading <span class="meta-nav">→</span></a>
-                                </div>
-                            </div>
-                        </article>
+                        {% endblock main %}
                     </main>
                 </div>
             </div>
         </div>
 
         <footer class="site-footer">
-            <div class="container">
+            <div class="container wow fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
                     <div class="col-md-12">
                         <p class="copyright">&copy 2017 牧心的博客</p>
@@ -191,6 +173,14 @@
         <script src="{% static 'blog/js/pace.min.js' %}"></script>
         <script src="{% static 'blog/js/custom.min.js' %}"></script>
 		<script src="{% static 'blog/js/script.js' %}"></script>
+        <!--[if (gte IE 9)|(!IE)]> -->
+	    <script src="{% static 'blog/js/wow.min.js' %}" type="text/javascript" charset="utf-8"></script>
+	    <!-- <![endif]-->
+	    <!--[if (gte IE 9)|(!IE)]> -->
+	    <script>
+	        new WOW().init();
+	    </script>
+	    <!-- <![endif]-->
 		<script>
             $(function(){
                 goTop();

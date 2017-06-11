@@ -19,7 +19,7 @@
 
 	<body id="page">
         <header class="site-header">
-            <div class="container">
+            <div class="container fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
                     <div class="col-md-4 col-sm-5 col-xs-8">
                         <div class="logo">
@@ -61,7 +61,7 @@
         </header>
 
         <div class="content-body">
-			<div class="container">
+			<div class="container fadeInLeft animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
 				<div class="row">
 					<main class="col-md-12">
 						<article class="post">
@@ -74,7 +74,7 @@
 											<input type="email" name="email" placeholder="Email" required>
 											<input type="text" name="subject" placeholder="Subject" required>
 											<textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-											<button class="btn-send btn-5 btn-5b "><i class="iconfont icon-iconfontfeiji"></i><span>Drop Me a Line</span></button>
+											<button class="btn-send btn-5 btn-5b "><i class="iconfont icon-iconfontfeiji"></i><span>发&nbsp;送</span></button>
 										</div>
 									</div>	<!-- row -->
 								</form>
@@ -86,7 +86,7 @@
         </div>
 
         <footer class="site-footer">
-            <div class="container">
+            <div class="container wow fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
                     <div class="col-md-12">
                         <p class="copyright">&copy 2017 牧心的博客</p>
@@ -116,6 +116,14 @@
         <script src="{% static 'blog/js/pace.min.js' %}"></script>
         <script src="{% static 'blog/js/custom.min.js' %}"></script>
 		<script src="{% static 'blog/js/script.js' %}"></script>
+        <!--[if (gte IE 9)|(!IE)]> -->
+	    <script src="{% static 'blog/js/wow.min.js' %}" type="text/javascript" charset="utf-8"></script>
+	    <!-- <![endif]-->
+	    <!--[if (gte IE 9)|(!IE)]> -->
+	    <script>
+	        new WOW().init();
+	    </script>
+	    <!-- <![endif]-->
 		<script>
             $(function(){
                 goTop();
