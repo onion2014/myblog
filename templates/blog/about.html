@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{% static 'blog/css/iconfont.css' %}">
         <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
         <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
+    	<link rel="shortcut icon" href="{% static 'blog/img/icons/favicon.ico' %}" type="image/x-icon">
 	    
 	</head>
 
@@ -24,7 +25,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-5 col-xs-8">
                         <div class="logo">
-                            <h1><a href="{% url 'blog:index' %}">牧心的博客</a></h1>
+                           <h1><a href="{% url 'blog:index' %}"><img src="{% static 'blog/img/icons/logo.png' %}"  width="48" height="48"/><span>牧心的博客</span></a></h1>
                         </div>
                     </div><!-- col-md-4 -->
                     <div class="col-md-8 col-sm-7 col-xs-4">
