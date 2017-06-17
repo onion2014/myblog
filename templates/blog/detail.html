@@ -46,8 +46,8 @@
     <section class="comment-area">
         <!-- 把友言评论系统代码放到想让评论框显示的地方 -->
         <!-- UY BEGIN -->
-{#        <div id="uyan_frame"></div>#}
-{#        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2134081"></script>#}
+        <!--<div id="uyan_frame"></div>
+        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2134081"></script>-->
         <!-- UY END -->
         <h3>发表评论</h3>
         <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
@@ -86,7 +86,7 @@
                     <div class="text">{{ comment.text }}</div>
                  </li>
                  {% empty %}
-                 暂无评论
+                 	暂无评论
                  {% endfor %}
              </ul>
          </div>

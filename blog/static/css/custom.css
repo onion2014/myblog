@@ -1,3 +1,4 @@
+@charset "utf-8";
 /**
  * 2.0 - General Elements
  * 3.0 - Site Header
@@ -61,19 +62,16 @@ body {
 
 p {
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
     word-spacing: 1px;
     letter-spacing: 0.01em;
+    margin: 0;
 }
-
-/*#single p,
-#page p {
-    margin-bottom: 25px;
-}*/
 
 .page-title {
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 0 0;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 .title {
@@ -99,7 +97,7 @@ img {
 .site-header {
     background: rgba(255,255,255,0.85);
     padding: 10px 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.3);
     box-shadow: 0 1px 6px rgba(0,0,0,.3);
     position: fixed;
@@ -118,8 +116,11 @@ img {
 .logo h1 a {
     display: inline-block;
     color: #000;
-    font-size: 28px;
-    /*font-weight: 500;*/
+    font-size: 26px;
+}
+.logo h1 a img{
+	width: 48px;
+	height: 48px;
 }
 .logo h1 a span{
 	display: inline-block;
@@ -145,7 +146,7 @@ img {
 
 .main-nav {
     margin-top: 14px;
-    max-width: 95%;
+    /*max-width: 95%;*/
 }
 
 .main-nav a {
@@ -164,16 +165,6 @@ img {
     border-bottom: 0;
 }
 
-.navbar-toggle {
-    border: 0;
-    padding: 0;
-    margin-right: 35px;
-}
-
-.navbar-toggle i {
-    font-size: 26px;
-    color: #000;
-}
 
 /**
  * 3.2.1 - Main Nav CSS 3 Hover Effect
@@ -211,7 +202,7 @@ img {
  */
 
 .post {
-    padding: 0 25px;
+    padding: 0 15px;
     margin-bottom: 20px;
     border: 1px solid rgba(0,0,0,0);
     background: rgba(255,255,255,0.6);
@@ -224,25 +215,23 @@ img {
 }
 .post:hover{
     border: 1px solid #ff6700;
-    /*-webkit-box-shadow: 0 1px 6px #13c5f8;
-    box-shadow: 0 1px 6px #13c5f8;*/
 }
 .entry-title {
     text-align: center;
-    font-size: 1.9em;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    padding: 10px 20px 0;
+    font-size: 22px;
+    margin-bottom: 15px;
+    padding: 15px 0 0;
 }
 
 .entry-meta {
     text-align: center;
-    color: #DDDDDD;
-    font-size: 13px;
-    margin-bottom: 30px;
+    color: #ddddd;
+    font-size: 12px;
+    margin-bottom: 20px;
 }
 .entry-meta span{
     margin: 0 5px;
+    white-space: nowrap;
 }
 .entry-meta span .iconfont{
     font-size: 18px;
@@ -283,7 +272,6 @@ img {
     word-spacing: 1px;
     letter-spacing: 0.01em;
     text-align: center;
-    margin-top: 20px;
 }
 
 .cl-effect-14 a {
@@ -362,7 +350,7 @@ img {
 
 .widget {
     background: rgba(255,255,255,0.5);
-    padding: 0 10px 5px;
+    padding: 0 15px 5px;
     margin-bottom: 20px;
     -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     box-shadow: 0 1px 6px rgba(0,0,0,0.2);
@@ -516,15 +504,19 @@ img {
     position: absolute;
     right: 10px;
     top: 9px;
+    line-height: 1;
 }
-
+#header-search-box a{
+    margin-top: 3px;
+    display: inline-block;
+}
 .search-form {
     display: none;
     width: 25%;
     position: absolute;
-    min-width: 400px;
+    min-width: 300px;
     right: 32px;
-    top: 1px;
+    top: 0;
 }
 
 #search-menu .icon-sousuo_sousuo {
@@ -537,18 +529,20 @@ img {
     position: relative;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    min-height: 36px;
+    min-height: 32px;
 }
 
 #searchform input[type=search] {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #aaa;
     position: absolute;
     left: 0;
-    padding: 6px 30px 6px 10px;
+    padding: 0px 30px 0px 10px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     z-index: 99;
+    height: 32px;
+    line-height: 32px;
 }
 #searchform input[type=search]:focus{
     border: 1px solid #3285e1;
@@ -594,7 +588,7 @@ img {
 
 .overlay .overlay-close {
     position: absolute;
-    right: 25px;
+    right: 10px;
     top: 10px;
     padding: 0;
     overflow: hidden;
@@ -606,15 +600,14 @@ img {
 
 .overlay-hugeinc.open .icon-cha {
     color: #000;
-    font-size: 36px;
+    font-size: 24px;
 }
 
 .overlay nav {
     text-align: center;
     position: relative;
-    top: 50%;
-    height: 60%;
-    font-size: 54px;
+    top: 40%;
+    height: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -630,13 +623,13 @@ img {
 
 .overlay ul li {
     display: block;
-    height: 20%;
-    height: calc(100% / 5);
+    /*height: 20%;
+    height: calc(100% / 5);*/
     min-height: 54px;
 }
 
 .overlay ul li a {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
     display: block;
     -webkit-transition: color 0.2s;
@@ -660,7 +653,7 @@ img {
     visibility: visible;
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .overlay-hugeinc nav {
@@ -851,68 +844,6 @@ img {
     left: 0;
 }
 
-/**
- * 11.0 - Media Query
- */
-
-@media (max-width: 991px) {
-    .main-nav a {
-        margin-right: 20px;
-    }
-
-    #header-search-box {
-        position: absolute;
-        right: 20px;
-    }
-}
-
-@media (max-width: 767px) {
-    #header-search-box {
-        right: 20px;
-        top: 8px;
-    }
-
-    .main-nav {
-        margin-top: 2px;
-    }
-
-    .btn-5 span {
-        display: none;
-    }
-
-    .btn-5b i {
-        left: 0;
-        color: #fff;
-    }
-}
-
-@media (max-width: 431px) {
-    .logo h1 {
-        margin-top: 8px;
-        font-size: 24px;
-    }
-
-    .post {
-        background: rgba(255,255,255,0.6);
-        padding: 0 10px 0;
-    }
-
-    .more-link {
-        font-size: 0.9em;
-        line-height: 100%;
-    }
-}
-
-@media screen and (max-height: 30.5em) {
-    .overlay nav {
-        height: 70%;
-        font-size: 34px;
-    }
-
-    .overlay ul li {
-        min-height: 34px;
-    }
-}
 
 /**
  * 12.0 - Comment
@@ -927,11 +858,16 @@ img {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-
+.comment-area h3{
+	margin-top: 15px;
+	font-size: 18px;
+}
 .comment-form {
     margin-top: 15px;
 }
-
+.comment-form  label{
+    font-weight: normal;
+}
 .comment-form .comment-btn {
     padding: 5px 20px;
     background: rgba(255,255,255,0.6);;
@@ -1003,7 +939,7 @@ img {
  */
 .m-gotop {
 	position: fixed;
-	right: 20px;
+	right: 30px;
 	bottom: 90px;
 	z-index: 100;
 	display: none;
@@ -1011,8 +947,8 @@ img {
 
 .m-gotop a {
 	display: block;
-	width: 60px;
-	height: 60px;
+	width: 54px;
+	height: 54px;
 	background: rgba(255,255,255,0.6);
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -1022,8 +958,8 @@ img {
 	text-align: center;
 }
 .m-gotop a i {
-	vertical-align: -28px;
-    font-size: 34px;
+	vertical-align: -21px;
+    font-size: 28px;
 }
 
 .m-gotop a:hover {
@@ -1067,12 +1003,9 @@ img {
 /**
  *覆盖bootstrap个别样式
  */
-@media (max-width: 1200px){
-    .content-body {
-        height: 100%;
-    }
+.navbar-collapse{
+	margin-right: 25px;
 }
-
 .pagination>.active>a, 
 .pagination>.active>a:focus, 
 .pagination>.active>a:hover, 
@@ -1090,7 +1023,7 @@ img {
     background: rgba(255,255,255,1);
 }
 .pagination{
-    margin: 0 0 30px;
+    margin: 0 0 25px;
 }
 .pagination>li>a i{
     font-size: 12px;
@@ -1104,6 +1037,180 @@ a:active {
 	outline: none;
     text-decoration: none;
 }
+/**
+ * 11.0 - Media Query
+ */
+@media (max-width: 1200px){
+    .content-body {
+        height: 100%;
+    }
+}
+@media (max-width: 992px) {
+    /*.main-nav a {
+        margin-right: 20px;
+    }
+
+    #header-search-box {
+        position: absolute;
+        right: 20px;
+    }*/
+   
+}
+
+@media (max-width: 768px) {
+	.navbar-nav>li>a{
+       margin-top: 5px;
+    }
+	.logo h1{
+		font-size: 22px;
+	}
+	.logo h1 a{
+		font-size: 22px;
+	}
+	.logo h1 a img{
+		width: 32px;
+		height: 32px;
+	}
+	.logo h1 a span{
+		margin-left: 10px;
+	    line-height: 32px;
+    	height: 32px;
+	}
+	.main-nav {
+	    margin-top: 0;
+	}
+	.navbar-toggle i {
+	    font-size: 18px;
+	    color: #000;
+	    vertical-align: -8px;
+	}
+	 .navbar-toggle {
+	    border: 0;
+	    padding: 0;
+	    margin-top: 0;
+	    margin-right: 30px;
+	    margin-bottom: 0;
+	}
+    #header-search-box {
+        right: 10px;
+        top: 0;
+    }
+   	#searchform{
+   		min-height: 28px;
+   	}
+   	#searchform input[type=search]{
+   		height: 28px;
+    	line-height: 28px;
+   	}
+   	#searchform button{
+	    right: 1px;
+	    top: 0px;
+	    width: 28px;
+	    height: 28px;
+	    line-height: 28px;
+   	}
+   	#header-search-box a{
+   		margin-top: 4px;
+   	}
+	#search-menu .icon-sousuo_sousuo {
+	    font-size: 25px;
+	}
+	 .btn-5 span {
+        display: none;
+    }
+    .btn-5b i {
+        left: 0;
+        color: #fff;
+    }
+    .content-body{
+    	margin-top: 70px;
+    }
+    .post{
+    	margin-bottom: 15px;
+    }
+    .entry-title{
+    	font-size: 18px;
+    }
+    .entry-meta{
+    	margin-bottom: 10px;
+    }
+    .entry-meta span .iconfont{
+    	font-size: 14px;
+    }
+    .entry-content{
+	    font-size: 16px;
+    }
+    .read-more{
+    	margin-top: 0;
+    }
+    .cl-effect-14 a{
+    	padding: 0px 15px;
+	    height: 30px;
+	    line-height: 30px;
+	    margin: 10px 0;
+    }
+    .cl-effect-14 a::before, .cl-effect-14 a::after{
+	    width: 30px;
+    }
+    .cl-effect-14 a:hover::before, .cl-effect-14 a:focus::before{
+	    left: 0;
+    	-webkit-transform:  rotate(90deg) translateX(0%);
+    	-moz-transform:  rotate(90deg) translateX(0%);
+    	transform: rotate(90deg) translateX(0%);
+    }
+    .cl-effect-14 a:hover::after, .cl-effect-14 a:focus::after{
+    	    right: 0;
+    	-webkit-transform: rotate(90deg) translateX(0%);
+	    -moz-transform: rotate(90deg) translateX(0%);
+	    transform: rotate(90deg) translateX(0%);
+    }
+    .pagination{
+	    margin: 0 0 15px;
+    }
+    .m-gotop{
+    	right: 15px;
+    	bottom: 75px;
+    }
+    .m-gotop a{
+	    width: 36px;
+    	height: 36px;
+    }
+    .m-gotop a i {
+	    vertical-align: -9px;
+	    font-size: 18px;
+	}
+    .page-title{
+    	font-size: 18px;
+    }
+    .contact-form input, 
+    .comment-form input{
+    	margin-bottom: 10px;
+	    padding: 0px 10px;
+	    font-size: 12px;
+	    height: 28px;
+	    line-height: 28px;
+    }
+    
+}
+
+@media (max-width: 640px) {
+	 .search-form{
+	    top: 3px;
+	    right: 28px;
+    	min-width: 150px;
+    }
+}
+
+/*@media screen and (max-height: 30.5em) {
+    .overlay nav {
+        height: 70%;
+        font-size: 34px;
+    }
+
+    .overlay ul li {
+        min-height: 34px;
+    }
+}*/
 
 /*动画效果*/
 .animated {
