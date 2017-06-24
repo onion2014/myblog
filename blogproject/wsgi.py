@@ -15,5 +15,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blogproject.settings")
+sys.path.append('/usr/lib/python2.7/site-packages')
+sys.path.append('/usr/lib64/python2.7/site-packages')
 
 application = get_wsgi_application()
