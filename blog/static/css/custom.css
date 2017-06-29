@@ -491,11 +491,22 @@ img {
 
 .copyright {
     text-align: center;
-    margin: 15px 0;
+    margin: 15px 0 5px;
     color: #fff;
     font-size: 16px;
 }
-
+.icp {
+    text-align: center;
+    margin: 0 0 15px;
+    color: #fff;
+    font-size: 12px;
+}
+.icp a{
+	color: #fff;
+}
+.icp a:hover{
+	text-decoration: underline;
+}
 /**
  * 7.0 - Header Search Bar
  */
