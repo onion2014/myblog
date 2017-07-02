@@ -442,9 +442,6 @@ img {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
 }
 .widget-category ul li:hover{
     margin-left: 15px;
