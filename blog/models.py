@@ -39,7 +39,7 @@ class Post(models.Model):
 
     # 文章摘要，可以没有文章摘要，但默认情况下 CharField 要求我们必须存入数据，否则就会报错。
     # 指定 CharField 的 blank=True 参数值后就可以允许空值了。
-    excerpt = models.CharField(max_length=200)
+    excerpt = models.CharField(max_length=200,blank=True)
 
     category = models.ForeignKey(Category)
     tags = models.ManyToManyField(Tag, blank=True)
@@ -78,3 +78,4 @@ class Post(models.Model):
 
             # 调用父类的 save 方法将数据保存到数据库中
             super(Post, self).save(*args, **kwargs)
+        super(Post, self).save(*args, **kwargs)
