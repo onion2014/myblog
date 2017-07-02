@@ -221,6 +221,11 @@ img {
     font-size: 22px;
     margin-bottom: 15px;
     padding: 15px 0 0;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
 }
 
 .entry-meta {
@@ -367,17 +372,22 @@ img {
 }
 
 .widget-recent-posts ul {
+	width: 100%;
     margin: 0;
     padding-left: 10px;
 }
 
 .widget-recent-posts ul li {
+	position: relative;
     list-style-type: none;
-    position: relative;
     line-height: 26px;
     margin-bottom: 10px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
 }
 .widget-recent-posts ul li:hover{
     margin-left: 15px;
@@ -390,17 +400,21 @@ img {
 }
 
 .widget-archives ul {
+	width: 100%;
     margin: 0;
     padding-left: 10px;
 }
 
 .widget-archives ul li {
+	position: relative;
     list-style-type: none;
-    position: relative;
     line-height: 26px;
     margin-bottom: 10px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .widget-archives ul li:hover{
     margin-left: 15px;
@@ -413,17 +427,24 @@ img {
 }
 
 .widget-category ul {
+	width: 100%;
     margin: 0;
     padding-left: 10px;
 }
 
 .widget-category ul li {
+	position: relative;
     list-style-type: none;
-    position: relative;
     line-height: 26px;
     margin-bottom: 10px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .widget-category ul li:hover{
     margin-left: 15px;
@@ -457,6 +478,11 @@ img {
     border-radius: 3px;
     -webkit-transition: border 0.5s, background 0.5s, color 0.5s;
     transition: border 0.5s, background 0.5s, color 0.5s;
+	max-width: 85px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
 }
 .widget-tag-cloud ul li a:hover{
     color: #fff;
