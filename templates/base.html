@@ -13,6 +13,7 @@
 
         <!-- css -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link rel="stylesheet" href="{% static 'css/iconfont.css' %}">
         <link rel="stylesheet" href="{% static 'css/pace.css' %}">
         <link rel="stylesheet" href="{% static 'css/custom.css' %}">
@@ -21,44 +22,44 @@
     </head>
 
     <body >
-        <header class="site-header">
+        <header class="site-header home-header">
             <div class="container fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="row">
-                    <div class="col-md-4 col-sm-5 col-xs-8">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="logo">
                             <h1><a href="{% url 'blog:index' %}"><img src="{% static 'img/icons/logo.png' %}"/><span>牧心的博客</span></a></h1>
                         </div>
+                        <div class="nav-wrap">
+	                        <nav class="main-nav" role="navigation">
+	                            <div class="navbar-header">
+	                                <button type="button" id="trigger-overlay" class="navbar-toggle">
+	                                    <i class="iconfont icon-menu"></i>
+	                                </button>
+	                            </div>
+	
+	                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                                <ul class="nav navbar-nav">
+	                                    <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
+	                                    <li -style="display: none" class="cl-effect-11"><a href="{% url 'blog:full_blog' %}" data-hover="博客">博客</a></li>
+	                                    <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
+	                                    <li class="cl-effect-11"><a href="{% url 'blog:contact' %}" data-hover="联系">联系</a></li>
+	                                </ul>
+	                            </div><!-- /.navbar-collapse -->
+	                        </nav>
+	                        <div id="header-search-box">
+	                            <a id="search-menu" href="#">
+	                                <i id="search-icon" class="iconfont icon-sousuo_sousuo"></i>
+	                            </a>
+	                            <div id="search-form" class="search-form">
+	                                <form role="search" method="get" id="searchform" action="{% url 'blog:search' %}">
+	                                    {% csrf_token %}
+	                                    <input type="search" name="searchWords" placeholder="搜索" required>
+	                                    <button type="submit"><i class="iconfont icon-sousuo"></i></button>
+	                                </form>
+	                            </div>
+	                        </div>
+	                    </div>
                     </div><!-- col-md-4 -->
-                    <div class="col-md-8 col-sm-7 col-xs-4">
-                        <nav class="main-nav" role="navigation">
-                            <div class="navbar-header">
-                                <button type="button" id="trigger-overlay" class="navbar-toggle">
-                                    <i class="iconfont icon-menu"></i>
-                                </button>
-                            </div>
-
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
-                                    <li -style="display: none" class="cl-effect-11"><a href="{% url 'blog:full_blog' %}" data-hover="博客">博客</a></li>
-                                    <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
-                                    <li class="cl-effect-11"><a href="{% url 'blog:contact' %}" data-hover="联系">联系</a></li>
-                                </ul>
-                            </div><!-- /.navbar-collapse -->
-                        </nav>
-                        <div id="header-search-box">
-                            <a id="search-menu" href="#">
-                                <i id="search-icon" class="iconfont icon-sousuo_sousuo"></i>
-                            </a>
-                            <div id="search-form" class="search-form">
-                                <form role="search" method="get" id="searchform" action="{% url 'blog:search' %}">
-                                    {% csrf_token %}
-                                    <input type="search" name="searchWords" placeholder="搜索" required>
-                                    <button type="submit"><i class="iconfont icon-sousuo"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div><!-- col-md-8 -->
                 </div>
             </div>
         </header>
