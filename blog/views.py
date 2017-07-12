@@ -2,7 +2,7 @@
 # from django.http import HttpResponse
 
 
-import markdown
+# import markdown
 
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
@@ -106,12 +106,12 @@ def detail(request, pk):
     #                                 'markdown.extensions.codehilite',
     #                                 'markdown.extensions.toc',
     #                             ])
-    md = markdown.Markdown(extensions=[
-        'markdown.extensions.extra',
-        'markdown.extensions.codehilite',
-        TocExtension(slugify=slugify),
-    ])
-    post.body = md.convert(post.body)
+    # md = markdown.Markdown(extensions=[
+    #     'markdown.extensions.extra',
+    #     'markdown.extensions.codehilite',
+    #     TocExtension(slugify=slugify),
+    # ])
+    # post.body = md.convert(post.body)
 
     # 记得在顶部导入 CommentForm
     form = CommentForm()
@@ -129,7 +129,7 @@ def detail(request, pk):
 
     # 将文章、表单、以及文章下的评论列表作为模板变量传给 detail.html 模板，以便渲染相应数据。
     context = {'post': post,
-               'toc': md.toc,
+    #           'toc': md.toc,
                'form': form,
                'comment_list': comment_list,
                'post_list': post_list,

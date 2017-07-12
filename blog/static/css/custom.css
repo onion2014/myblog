@@ -75,6 +75,7 @@ img {
 
 .site-header {
     background: url(../img/bg/header-bg.jpg) no-repeat;
+    background-size: cover;
     padding: 10px 0;
     margin-bottom: 25px;
     -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.3);
@@ -135,10 +136,10 @@ img {
 }
 .home-header .main-nav {
 	display: inline-block;
-	/*background: #affe4a;*/
 	background: rgba(59,168,11,.5);
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    width: 50%;
 }
 .home-header .main-nav .collapse{
 	padding: 15px 0;
@@ -511,11 +512,9 @@ img {
  */
 
 .site-footer {
-    /*background: #202121;*/
     background: url(../img/bg/footer-bg.jpg) no-repeat bottom center;
-    /*opacity: 0.8;
-    filter: alpha(opacity=80);*/
     overflow: hidden;
+    background-size: cover;
 }
 
 .copyright {

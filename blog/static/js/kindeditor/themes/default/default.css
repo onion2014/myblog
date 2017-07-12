@@ -808,8 +808,8 @@
 }
 .ke-button {
 	background-position: right -25px;
-	padding: 0 14px 0 12px;
-	margin: 0 0 0 2px;
+	padding: 0 14px 0 12px!important;
+	margin: 0;
 	font-family: "sans serif",tahoma,verdana,helvetica;
 	border: 0 none;
 	color: #333;
@@ -864,7 +864,7 @@
 }
 .ke-upload-area .ke-upload-file {
 	position: absolute;
-	font-size: 60px;
+	/*font-size: 60px;*/
 	top: 0;
 	right: 0;
 	padding: 0;
@@ -873,6 +873,7 @@
 	border: 0 none;
 	opacity: 0;
 	filter: alpha(opacity=0);
+	cursor: pointer;
 }
 /* tabs */
 .ke-tabs {
@@ -899,6 +900,7 @@
 	text-align: center;
 	color: #555555;
 	cursor: pointer;
+    list-style: none;
 }
 .ke-tabs-li-selected {
 	background-color: #FFF;
