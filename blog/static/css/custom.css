@@ -236,13 +236,16 @@ img {
 
 .entry-meta {
     text-align: center;
-    color: #ddddd;
+    color: #dddddd;
     font-size: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .entry-meta span{
     margin: 0 5px;
     white-space: nowrap;
+}
+.entry-meta .post-author{
+    display: none;
 }
 .entry-meta span .iconfont{
     font-size: 18px;
@@ -255,6 +258,7 @@ img {
     cursor: default;
 }
 .entry-content {
+    margin-bottom: 10px;
     font-size: 18px;
     line-height: 1.9;
     font-weight: 300;
@@ -512,7 +516,7 @@ img {
  */
 
 .site-footer {
-    background: url(../img/bg/footer-bg.jpg) no-repeat bottom center;
+    background: url(../img/bg/footer-bg.jpg) no-repeat center center;
     overflow: hidden;
     background-size: cover;
 }
@@ -1082,6 +1086,10 @@ img {
 .pagination>li>a {
     color: #3285e1;
     background: rgba(255,255,255,0.6);
+    box-sizing: border-box;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
 }
 .pagination>li>a:hover {
     background: rgba(255,255,255,1);
