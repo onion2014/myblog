@@ -235,7 +235,7 @@ img {
 }
 
 .entry-meta {
-    text-align: center;
+    text-align: right;
     color: #dddddd;
     font-size: 12px;
     margin-bottom: 10px;
@@ -286,7 +286,7 @@ img {
     font-weight: 400;
     word-spacing: 1px;
     letter-spacing: 0.01em;
-    text-align: center;
+    text-align: right;
 }
 
 .cl-effect-14 a {
@@ -1090,6 +1090,7 @@ img {
     display: inline-block;
     width: 32px;
     height: 32px;
+    line-height: 20px;
 }
 .pagination>li>a:hover {
     background: rgba(255,255,255,1);
@@ -1128,6 +1129,35 @@ a:focus, a:hover, a:active {
 }
 
 @media (max-width: 768px) {
+	.home-header{
+	    margin-bottom: 20px;
+	}
+	.home-header .logo h1{
+	    margin-top: 0px;
+        margin-bottom: 10px;
+	}
+	.nav-wrap{
+		margin-top: 0;
+	}
+	.home-header .main-nav{
+	    position: absolute;
+	    top: 2px;
+	    right: 15px;
+	    background: none;
+	}
+	.home-header #header-search-box a{
+		display: block;
+		color: #333;
+	}
+	.home-header .search-form{
+		display: none;
+	    right: 25px;
+    	top: 3px;
+	}
+	.home-header #header-search-box{
+	    right: 10px;
+    	bottom: 13px;
+	}
 	.navbar-nav>li>a{
        margin-top: 5px;
     }
@@ -1157,13 +1187,13 @@ a:focus, a:hover, a:active {
 	 .navbar-toggle {
 	    border: 0;
 	    padding: 0;
-	    margin-top: 0;
+	    margin-top: 1px;
 	    margin-right: 30px;
 	    margin-bottom: 0;
 	}
     #header-search-box {
         right: 10px;
-        top: 0;
+        top: -1px;
     }
    	#searchform{
    		min-height: 28px;
@@ -1181,6 +1211,7 @@ a:focus, a:hover, a:active {
    	}
    	#header-search-box a{
    		margin-top: 4px;
+	    color: #333;
    	}
 	#search-menu .icon-sousuo_sousuo {
 	    font-size: 25px;
@@ -1193,6 +1224,9 @@ a:focus, a:hover, a:active {
         color: #fff;
     }
     .content-body{
+    	/*margin-top: 70px;*/
+    }
+    .sub-content-body{
     	margin-top: 70px;
     }
     .post{
@@ -1259,6 +1293,12 @@ a:focus, a:hover, a:active {
 	    font-size: 12px;
 	    height: 28px;
 	    line-height: 28px;
+    }
+    .copyright{
+    	margin: 10px 0 0px;
+    }
+    .icp{
+	    margin: 0 0 10px;
     }
     
 }
