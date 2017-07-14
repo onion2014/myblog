@@ -13,26 +13,25 @@
                <div class="entry-meta">
                   <span class="post-category">
                       <i class="iconfont icon-fenlei"></i>
-                      <a href="#">{{ post.category.name }}</a>
+                      <span>{{ post.category.name }}</span>
                   </span>
                   <span class="post-date">
                       <i class="iconfont icon-shijian"></i>
-                      <a href="#">
+                      <span>
                           <time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time>
-                      </a>
+                      </span>
                   </span>
                   <span class="post-author">
                       <i class="iconfont icon-zuozhe"></i>
-                      <a href="#">{{ post.author }}</a>
+                      <span>{{ post.author }}</span>
                   </span>
                   <span class="comments-link">
                       <i class="iconfont icon-pinglun"></i>
-                      <a href="#">{{ post.comment_set.count }} 评论</a>
+                      <span>{{ post.comment_set.count }} 评论</span>
                   </span>
                   <span class="views-count">
                       <i class="iconfont icon-yuedu"></i>
-                      <a href="#">{{ post.views }} 阅读</a>
-
+                      <span>{{ post.views }} 阅读</span>
                   </span>
                </div>
             </header>

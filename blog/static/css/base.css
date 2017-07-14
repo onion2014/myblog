@@ -34,6 +34,6 @@ input[type=file]>input[type=button]::-moz-focus-inner{border:0;padding:0;}
 *html .clearfix {height: 1%;}
 *+html .clearfix {min-height: 1%;}
 html {font-size: 62.5%;}
-body {font: 12px/1.5 Arial, Verdana, "微软雅黑";color:#333;background:transparent;_background-image: url(about:blank);_background-attachment: fixed;}
+body {font: 12px/1.5 Arial, Verdana, "微软雅黑";color:#000;background:transparent;_background-image: url(about:blank);_background-attachment: fixed;}
 h1,h2,h3,h4,h5,h6 {font-weight:normal;}
 a:link,a:visited {text-decoration: none;}

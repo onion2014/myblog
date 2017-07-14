@@ -9,7 +9,10 @@
 
 		<!-- meta -->
 		<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Python学习,Django学习,Javascript学习，Html5学习，Css3学习，Vue.js学习，Angular.js学习,Linux学习，阿里云服务器部署，Less学习">
+		<meta name="description" content="牧心的博客是基于django框架开发的，该博客用于学习、分享、交流前端（Html5、Css3、Javascript、Vue.js...），Linux系统，后端（Python、Django...），服务器部署（阿里云ECS、Nginx、Gunicorn...）等方面的知识。">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	    <!-- css -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -77,30 +80,29 @@
                                     <header class="entry-header">
                                         <h1 class="entry-title">{{ post.title }}</h1>
                                        <div class="entry-meta">
-                                          <span class="post-category">
-                                              <i class="iconfont icon-fenlei"></i>
-                                              <a href="#">{{ post.category.name }}</a>
-                                          </span>
-                                          <span class="post-date">
-                                              <i class="iconfont icon-shijian"></i>
-                                              <a href="#">
-                                                  <time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time>
-                                              </a>
-                                          </span>
-                                          <span class="post-author">
-                                              <i class="iconfont icon-zuozhe"></i>
-                                              <a href="#">{{ post.author }}</a>
-                                          </span>
-                                          <span class="comments-link">
-                                              <i class="iconfont icon-pinglun"></i>
-                                              <a href="#">{{ post.comment_set.count }} 评论</a>
-                                          </span>
-                                          <span class="views-count">
-                                              <i class="iconfont icon-yuedu"></i>
-                                              <a href="#">{{ post.views }} 阅读</a>
-
-                                          </span>
-                                       </div>
+						                  <span class="post-category">
+						                      <i class="iconfont icon-fenlei"></i>
+						                      <span>{{ post.category.name }}</span>
+						                  </span>
+						                  <span class="post-date">
+						                      <i class="iconfont icon-shijian"></i>
+						                      <span>
+						                          <time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time>
+						                      </span>
+						                  </span>
+						                  <span class="post-author">
+						                      <i class="iconfont icon-zuozhe"></i>
+						                      <span>{{ post.author }}</span>
+						                  </span>
+						                  <span class="comments-link">
+						                      <i class="iconfont icon-pinglun"></i>
+						                      <span>{{ post.comment_set.count }} 评论</span>
+						                  </span>
+						                  <span class="views-count">
+						                      <i class="iconfont icon-yuedu"></i>
+						                      <span>{{ post.views }} 阅读</span>
+						                  </span>
+						               </div>
                                     </header>
                                     <div class="entry-content clearfix">
                                         <p>{{ post.excerpt }}</p>
