@@ -17,7 +17,7 @@
         <link rel="shortcut icon" href="{% static 'img/icons/favicon.ico' %}" type="image/x-icon">
 		<!--[if lte IE 9]>
 	    <script type="text/javascript">
-	        window.location = "error.html"
+	        window.location = "{% url 'blog:error' %}"
 	    </script>
 	    <![endif]-->
 	</head>

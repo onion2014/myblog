@@ -54,7 +54,9 @@ def full_blog(request):
 def resume(request):
     return render(request, 'blog/resume.html')
     
-    
+
+def error(request):
+    return render(request, 'blog/error.html')    
 # def contact(request):
 #    return render(request, 'blog/contact.html')
 
