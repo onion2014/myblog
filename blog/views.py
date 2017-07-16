@@ -51,12 +51,12 @@ def full_blog(request):
     return render(request, 'blog/full-blog.html', context={'post_list': post_list})
 
 
-def about(request):
-    return render(request, 'blog/about.html')
-
-
-def contact(request):
-    return render(request, 'blog/contact.html')
+def resume(request):
+    return render(request, 'blog/resume.html')
+    
+    
+# def contact(request):
+#    return render(request, 'blog/contact.html')
 
 
 # def single(request):

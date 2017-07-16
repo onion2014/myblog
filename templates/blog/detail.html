@@ -44,11 +44,13 @@
         </div>
     </article>
     <section class="comment-area">
-        <!-- 把友言评论系统代码放到想让评论框显示的地方 -->
+        <!-- 把搜狐畅言评论系统 -->
 		<!-- UY BEGIN -->
 		<!-- <div id="uyan_frame"></div> -->
 		<!-- <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2137891"></script> -->
 		<!-- UY END -->
+		
+		<!-- SOHUCS BEGIN -->
 		<!--PC和WAP自适应版-->
 		<div id="SOHUCS" ></div>
 		<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
@@ -58,6 +60,7 @@
 		conf: 'prod_de4ec7bf574ca64c97683fffe28b0cb3'
 		});
 		</script>
+		<!-- SOHUCS END -->
 		<!--<h3>发表评论</h3>
         <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
             {% csrf_token %}

@@ -43,9 +43,8 @@
 	                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                                <ul class="nav navbar-nav">
 	                                    <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
-	                                    <li -style="display: none" class="cl-effect-11"><a href="{% url 'blog:full_blog' %}" data-hover="博客">博客</a></li>
-	                                    <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
-	                                    <li class="cl-effect-11"><a href="{% url 'blog:contact' %}" data-hover="联系">联系</a></li>
+	                                    <li class="cl-effect-11"><a href="{% url 'blog:full_blog' %}" data-hover="博客">博客</a></li>
+	                                    <li class="cl-effect-11"><a href="{% url 'blog:resume' %}" data-hover="关于我">关于我</a></li>
 	                                </ul>
 	                            </div><!-- /.navbar-collapse -->
 	                        </nav>
@@ -155,11 +154,10 @@
             <button type="button" class="overlay-close"><i class="iconfont icon-cha"></i></button>
             <nav>
                 <ul>
-                    <li><a href="{% url 'blog:index' %}">首页</a></li>
+					<li><a href="{% url 'blog:index' %}">首页</a></li>
                     <li><a href="{% url 'blog:full_blog' %}">博客</a></li>
-                    <li><a href="{% url 'blog:about' %}">关于</a></li>
-                    <li><a href="{% url 'blog:contact' %}">联系</a></li>
-                </ul>
+                    <li><a href="{% url 'blog:resume' %}">关于我</a></li>
+				</ul>
             </nav>
         </div>
         <!-- go top -->

@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="Python学习,Django学习,Javascript学习，Html5学习，Css3学习，Vue.js学习，Angular.js学习,Linux学习，阿里云服务器部署，Less学习">
 		<meta name="description" content="牧心的博客是基于django框架开发的，该博客用于学习、分享、交流前端（Html5、Css3、Javascript、Vue.js...），Linux系统，后端（Python、Django...），服务器部署（阿里云ECS、Nginx、Gunicorn...）等方面的知识。">
+		<meta name="author" content="tengyifeng,牧心">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	    <!-- css -->
@@ -45,8 +46,7 @@
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
                                     <li class="cl-effect-11"><a href="{% url 'blog:full_blog' %}" data-hover="博客">博客</a></li>
-                                    <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
-                                    <li class="cl-effect-11"><a href="{% url 'blog:contact' %}" data-hover="联系">联系</a></li>
+                                    <li class="cl-effect-11"><a href="{% url 'blog:resume' %}" data-hover="关于我">关于我</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </nav>
@@ -163,8 +163,7 @@
 				<ul>
 					<li><a href="{% url 'blog:index' %}">首页</a></li>
                     <li><a href="{% url 'blog:full_blog' %}">博客</a></li>
-                    <li><a href="{% url 'blog:about' %}">关于</a></li>
-                    <li><a href="{% url 'blog:contact' %}">联系</a></li>
+                    <li><a href="{% url 'blog:resume' %}">关于我</a></li>
 				</ul>
 			</nav>
 		</div>

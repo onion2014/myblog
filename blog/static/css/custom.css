@@ -136,6 +136,7 @@ img {
 }
 .home-header .main-nav {
 	display: inline-block;
+	margin-bottom: 5px;
 	background: rgba(59,168,11,.5);
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -572,7 +573,7 @@ img {
 	display: block;
     position: absolute;
     right: -5px;
-    top: -38px;
+    top: -34px;
 }
 #search-menu .icon-sousuo_sousuo {
     font-size: 26px;

@@ -1,0 +1,400 @@
+{%  load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>牧心的简历</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="keywords" content="web前端个人简历,web前端,个人博客,前端工程师">
+		<meta name="description" content="tengyifeng的个人简历,牧心的简历">
+		<meta name="author" content="tengyifeng,牧心">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/resume.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/icons/favicon.ico' %}" type="image/x-icon">
+		<!--[if lte IE 9]>
+	    <script type="text/javascript">
+	        window.location = "error.html"
+	    </script>
+	    <![endif]-->
+	</head>
+
+	<body>
+		<div class="content ">
+			<div class="cv-container">
+				<div id="section1" class="section active" >
+					<div id="top" title="顶部">
+						<img src="{% static 'img/icons/top.png' %}" alt="回到顶部">
+					</div>
+					<div class="myIntro">
+						<h1 class="fade ">Hello, I'm MuXin</h1>
+						<h3 class="fade ">一个不抽烟的程序员</h3>
+						<span class="active fade " id="abMe">关于我</span>
+						<span id="mypro" class="fade ">我的作品</span>
+					</div>
+					<ul class="bg-img">
+						<li class="show"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+
+				<div id="section2" class="section">
+					<!-- 导航条-->
+					<div class="" style="height: 60px;">
+						<div id="nav-bar" class="bar">
+							<div class="container">
+								<a href="{% url 'blog:index' %}" class="clearfix">
+									<div class="fl"><img src="{% static 'img/icons/logo.png' %}"/>牧心的博客</div>
+								</a>
+								<ul class="fr nav-ul">
+									<li>关于我</li>
+									<li>求职意向</li>
+									<li>作品集</li>
+									<li>技术栈</li>
+									<li>我的经历</li>
+									<li>联系我</li>
+								</ul>
+								<div class="fr more-nav">
+									<img src="{% static 'img/icons/meun.png' %}" alt="菜单">
+								</div>
+							</div>
+							<ul class="nav-ul nav-xs-ul" style="display: none;">
+								<li>关于我</li>
+								<li>求职意向</li>
+								<li>作品集</li>
+								<li>技术栈</li>
+								<li>我的经历</li>
+								<li>联系我</li>
+							</ul>
+						</div>
+					</div>
+					
+
+					<!--关于我-->
+					<h2>关于我</h2>
+					<hr>
+					<div class="center fades ">
+						<p class="center"><img src="{% static 'img/mypic.jpg' %}" alt="头像"></p>
+						<div class="my-intro">
+							<p>我叫邓峰，26岁，坐标襄阳，是一名web前端工程师。我不是计算机科班出生，大学的课程涉及计算机的是《大学计算机基础》，《VB程序设计》，《Access数据库》，但是对计算机技术有着浓厚的兴趣，自学前端相关技术。今后的职业规划是朝着全栈工程师努力，目前在学习Vue.js，Python。</p>
+							<p>个人适应能力强，能很快的投入到新的环境中去；工作细心，有较强的抗压能力，同时具有良好的团队协作精神</p>
+							<p>工作三年多，写过响应式页面，app端页面，pc端页面。</p>
+						</div>
+					</div>
+				</div>
+				<div id="section3" class="section">
+					<h2>求职意向</h2>
+					<hr>
+					<div class="container center fades ">
+						<div class="col-md-3 col-xs-6 skill-ps skill">
+							<p><img src="{% static 'img/icons/pc.png' %}" alt="PC端开发"></p>
+							<p class="ptitle">PC端开发</p>
+							<p>响应式页面,简单不冗余代码。</p>
+							<p>css3流畅动画效果，兼容不同浏览器。</p>
+						</div>
+						<div class="col-md-3 col-xs-6 skill-h5 skill">
+							<p><img src="{% static 'img/icons/app.png' %}" alt="App开发"></p>
+							<p class="ptitle">App开发</p>
+							<p>移动端页面的书写</p>
+							<p>兼容平板、安卓、IOS不同终端</p>
+						</div>
+						<div class="col-md-3 col-xs-6 skill-js skill">
+							<p><img src="{% static 'img/icons/action.png' %}" alt="前端功能"></p>
+							<p class="ptitle">前端功能</p>
+							<p>用JS完成常见的前端功能特效</p>
+							<p>与后台交互</p>
+						</div>
+						<div class="col-md-3 col-xs-6 skill-web skill">
+							<p><img src="{% static 'img/icons/develop.png' %}" alt="后台开发"></p>
+							<p class="ptitle">后台开发</p>
+							<p>Python web开发</p>
+							<p>Python开发</p>
+						</div>
+					</div>
+				</div>
+				<div id="section4" class="section">
+					<h2>作品集</h2>
+					<hr>
+					<div class="container center fades ">
+						<p class="center intros">写前端功能的时候，宗旨是能手写就手写，不依赖插件。手写代码更简洁高效，也更能提升自己技术。</p>
+						<div class="col-md-3 col-xs-6">
+							<div class="imgbox">
+								<img src="{% static 'img/bg/01.jpg' %}" alt="作品配图">
+							</div>
+							<a href="###" target="_blank">
+								<div class="zp-cover">
+									<h4 style="color: rgb(255, 255, 255);">商城类页面</h4>
+									<p>购物车结算jq，订单的选择或删除、金额的计算。</p>
+									<img src="{% static 'img/icons/search.png' %}" alt="查看">
+								</div>
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<div class="imgbox">
+								<img src="{% static 'img/bg/02.jpg' %}" alt="作品配图">
+							</div>
+							<a href="###" target="_blank">
+								<div class="zp-cover" style="top: 45%">
+									<h4 style="color: rgb(255, 255, 255);">测试类页面</h4>
+									<p>AJAX获取后台数据，用数组读取选项与题目。记录测试者的选项返给后台。</p>
+									<img src="{% static 'img/icons/search.png' %}" alt="查看">
+								</div>
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6 ">
+							<div class="imgbox">
+								<img src="{% static 'img/bg/03.jpg' %}" alt="作品配图">
+							</div>
+							<a href="###" target="_blank">
+								<div class="zp-cover">
+									<h4 style="color: rgb(255, 255, 255);">列表类页面</h4>
+									<p>无缝轮播手写，花瓣动画。</p>
+									<img src="{% static 'img/icons/search.png' %}" alt="查看">
+								</div>
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<div class="imgbox">
+								<img src="{% static 'img/bg/04.jpg' %}" alt="作品配图">
+							</div>
+							<a href="###" target="_blank">
+								<div class="zp-cover">
+									<h4 style="color: rgb(255, 255, 255);">我的技术博客</h4>
+									<p>自己平时的知识点积累~</p>
+									<img src="{% static 'img/icons/search.png' %}" alt="查看">
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="section5" class="section">
+					<h2>技术掌握</h2>
+					<hr>
+					<div class="container center fades ">
+						<div class="col-md-6 col-xs-12">
+							<div class="wrap-box">
+								<div id="myChart1" class="mychart" -style="width: 530px;height:320px;"></div>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="wrap-box">
+								<div id="myChart2" class="mychart" -style="width: 530px;height:320px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="section6" class="section">
+					<h2>我的经历</h2>
+					<hr>
+					<div class="container center fades ">
+						<ul class="my-xp">
+							<li>
+								<div class="date-box">
+									<p>现在</p>
+									<p>-</p>
+									<p>05/2016</p>
+								</div>
+								<div class="my-work my-xp-box">
+									<strong>北京南北天地科技股份有限公司</strong>
+									<p class="ptitle">技术部/前端工程师</p>
+									<p>负责页面制作。PSD切图后构建页面框架</p>
+									<p>利用JS、CSS书写前端功能，让页面更充实丰富</p>
+								</div>
+							</li>
+							<li>
+								<div class="date-box">
+									<p>07/2014</p>
+									<p>-</p>
+									<p>09/2010</p>
+								</div>
+								<div class="my-school my-xp-box">
+									<strong>湖北师范大学</strong>
+									<p class="ptitle">大学本科</p>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<div id="section7" class="section">
+					<h2>联系我</h2>
+					<hr>
+					<div class="container center fades ">
+						<div class="flow">
+							<div class="contact-me">
+								<p>网易邮箱：dengfeng214@163.com</p>
+								<p>QQ号：491308293</p>
+							</div>
+							<!-- SOHUCS BEGIN -->
+							<!--PC和WAP自适应版-->
+							<div id="SOHUCS" ></div>
+							<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+							<script type="text/javascript">
+								window.changyan.api.config({
+								appid: 'cyt5Mr3l9',
+								conf: 'prod_de4ec7bf574ca64c97683fffe28b0cb3'
+								});
+							</script>
+							<!-- SOHUCS END -->
+							<div class="half fr">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="center beian">Copyright © 2017 牧心
+				<a href="http://www.miitbeian.gov.cn/">京ICP备17034723号-1</a>
+			</p>
+
+		</div>
+		<script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/echarts.min.js' %}"></script>
+        <script src="{% static 'js/resume.js' %}"></script>
+		<!--前端技术-->
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById('myChart1'));
+			var option = {
+		            title: {
+		                text: '前端技术',
+		                textStyle: {
+							color: '#333',
+							fontSize: '14',
+						}
+		            },
+		            tooltip: {
+				        trigger: 'item',
+				        textStyle: {
+							color: '#fff',
+							fontSize: '12',
+						},
+				        formatter: "{a} <br/>{b}: {c} ({d}%)"
+				    },
+		            legend: {
+				        orient: 'vertical',
+				        x: 'right',
+				        itemWidth: 18,
+						itemHeight: 12,
+						textStyle: {
+							fontSize: '12',
+						},
+				        data:['Html5','Css3','JavaScript','jQuery','Vue.js','Angular.js','Less','webpack','其他']
+				    },
+				    color:['#48cda6','#fd87ab','#368aed','#e1aefe','#31abff','#ffdf33','#968ade','#368eda','#f0cea6'],
+				    series: [
+				        {
+				            name:'前端技术',
+				            type:'pie',
+				            radius: ['50%', '70%'],
+				            avoidLabelOverlap: false,
+				            label: {
+				                normal: {
+				                    show: false,
+				                    position: 'center'
+				                },
+				                emphasis: {
+				                    show: true,
+				                    textStyle: {
+				                        fontSize: '14',
+				                        fontWeight: 'bold'
+				                    }
+				                }
+				            },
+				            labelLine: {
+				                normal: {
+				                    show: false
+				                }
+				            },
+				            data:[
+				                {value:200, name:'Html5'},
+				                {value:200, name:'Css3'},
+				                {value:165, name:'JavaScript'},
+				                {value:185, name:'jQuery'},
+				                {value:110, name:'Vue.js'},
+				                {value:50, name:'Angular.js'},
+				                {value:50, name:'Less'},
+				                {value:20, name:'webpack'},
+				                {value:10, name:'其他'}
+				            ]
+				        }
+				    ]
+		        };
+		
+		        // 使用刚指定的配置项和数据显示图表。
+		        myChart.setOption(option);
+		</script>
+		<!--后台技术-->
+		<script type="text/javascript">
+			var myChart2 = echarts.init(document.getElementById('myChart2'));
+			var option = {
+		            title: {
+		                text: '后端技术',
+		                textStyle: {
+							color: '#333',
+							fontSize: '14',
+						}
+		            },
+		            tooltip: {
+				        trigger: 'item',
+				        textStyle: {
+							color: '#fff',
+							fontSize: '12',
+						},
+				        formatter: "{a} <br/>{b}: {c} ({d}%)"
+				    },
+		            legend: {
+				        orient: 'vertical',
+				        x: 'right',
+				        itemWidth: 18,
+						itemHeight: 12,
+						textStyle: {
+							fontSize: '12',
+						},
+				        data:['Python','Django','Linux','Nginx','Gunicorn','其他']
+				    },
+				    color:['#48cda6','#fd87ab','#11abff','#ffdf33','#968ade','#368eda'],
+				    series: [
+				        {
+				            name:'后端技术',
+				            type:'pie',
+				            radius: ['50%', '70%'],
+				            avoidLabelOverlap: false,
+				            label: {
+				                normal: {
+				                    show: false,
+				                    position: 'center'
+				                },
+				                emphasis: {
+				                    show: true,
+				                    textStyle: {
+				                        fontSize: '14',
+				                        fontWeight: 'bold'
+				                    }
+				                }
+				            },
+				            labelLine: {
+				                normal: {
+				                    show: false
+				                }
+				            },
+				            data:[
+				                {value:185, name:'Python'},
+				                {value:160, name:'Django'},
+				                {value:140, name:'Linux'},
+				                {value:110, name:'Nginx'},
+				                {value:85, name:'Gunicorn'},
+				                {value:35, name:'其他'}
+				            ]
+				        }
+				    ]
+		        };
+		
+		        myChart2.setOption(option);
+		</script>
+	</body>
+</html>
