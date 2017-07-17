@@ -679,7 +679,10 @@ div.skill p{
 		margin: 0 auto;
 	}
 	#section1{
-		min-height: 568px;
+		min-height: 540px;
+	}
+	#section1 .myIntro{
+		20vh 0 0;
 	}
 	#section4 h2{
 		padding-top: 80px;
