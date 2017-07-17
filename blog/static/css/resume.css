@@ -291,8 +291,10 @@ body{
 #nav-bar{
     width: 100%;
     height: 60px;
-    background-color: #41b40e;
-    color: #000;
+    /*background-color: #41b40e;*/
+    /*color: #000;*/
+    background: url(../img/bg/header-bg.jpg) no-repeat;
+    background-size: cover;
 }
 #nav-bar.fixed{
     position: fixed;
@@ -303,30 +305,29 @@ body{
 	display: inline-block;
 }
 #nav-bar a img{
-	margin-right: 5px;
-	width: 30px;
+    margin-right: 10px;
+    width: 30px;
     height: 30px;
+    vertical-align: -8px;
 }
 #nav-bar div.fl{
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 20px;
     line-height: 60px;
     color: #ffffff;
     transition: all ease-in 0.5s;
-}
-#nav-bar div.fl:hover{
-	color: #000;
 }
 .nav-ul li{
     float: left;
     line-height: 60px;
     width: 80px;
+    font-size: 16px;
+    color: #2c3e50;
     cursor: pointer;
     text-align: center;
     transition: all ease-in 0.5s;
 }
 .nav-ul li:hover, .nav-ul li.active{
-    color: #fff;
+    color: #E87E04;
 }
 .nav-xs-ul li{
     color: #f5f5f5;
@@ -337,7 +338,7 @@ body{
     left:0;
     width:100%;
     padding-bottom: 1em;
-    background: #2c3e50;
+    /*background: #2c3e50;*/
     display: none;
     z-index: 100;
 }
@@ -346,12 +347,13 @@ body{
     height: 3em;
     line-height: 3em;
     font-size: 14px;
-    background: #2c3e50;
+    color: #2c3e50;
+    background: #ADDD55;
     cursor: pointer;
     text-align: center;
 }
 .nav-ul.nav-xs-ul li:first-child{
-    border-top: 1px solid #555;
+    /*border-top: 1px solid #555;*/
 }
 .more-nav{
     display: none;
@@ -575,7 +577,11 @@ div.skill p{
 #section6 .my-xp li >div:last-child{
     padding: 1em 0;
 }
-
+.contact-me p{
+    margin-bottom: 5px;
+    color: #E87E04;
+    font-size: 16px;
+}
 .beian{
 	padding: 10px 0;
     font-size: 12px;
@@ -586,7 +592,7 @@ div.skill p{
 	color: #fff;
 }
 /*
-    屏幕宽度小于1224px
+    屏幕宽度小于1200px
 */
 @media only screen and (max-width:1200px){
 
