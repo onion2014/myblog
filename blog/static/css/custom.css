@@ -519,20 +519,24 @@ img {
 .copyright {
     text-align: center;
     margin: 15px 0 5px;
-    /*color: #fff;*/
-    font-size: 16px;
+    font-size: 14px;
 }
 .icp {
     text-align: center;
-    margin: 0 0 15px;
-    color: #333;
-    font-size: 12px;
 }
-.icp a{
+.blog-beian{
+	margin-bottom: 15px;
+	text-align:center;
+}
+.blog-beian a{
 	color: #333;
 }
-.icp a:hover{
+.blog-beian a:hover{
+	color: #333;
 	text-decoration: underline;
+}
+.blog-beian a img{
+	vertical-align: -5px;
 }
 /**
  * 7.0 - Header Search Bar
