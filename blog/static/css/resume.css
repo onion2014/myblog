@@ -775,3 +775,19 @@ div.skill p{
 
 
 }
+
+/* 畅言样式修改 */
+#section7 #SOHUCS #SOHU_MAIN .module-cmt-footer .section-service-w{
+	display: none!important;
+}
+#section7 #SOHUCS #SOHU_MAIN .section-newslist-w .conts-col li a{
+	color: #3487e2!important;
+}
+#section7 #SOHUCS #SOHU_MAIN .section-newslist-w .conts-col li a:hover{
+	color: #E87E04!important;
+}
+#section7 #SOHUCS #SOHU_MAIN .section-newslist-w .conts-col li{
+	background-image: none!important;
+	padding: 5px 0 5px 0px!important;
+}
+
