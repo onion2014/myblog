@@ -576,6 +576,10 @@ div.skill p{
 }
 #section6 .my-xp li >div:last-child{
     padding: 1em 0;
+	height: 180px;
+}
+#section6 .my-xp li:last-child >div{
+    height: 150px;
 }
 #section7 .flow{
 	margin-bottom: 100px;
