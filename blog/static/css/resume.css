@@ -157,7 +157,7 @@ body{
     padding-bottom: 40px;
 }
 .section{
-    /*min-height: 700px;*/
+    min-height: 500px;
    
 }
 #section7{
@@ -716,6 +716,7 @@ div.skill p{
     }
     #section2{
         height: 100vh;
+		min-height: 700px;
     }
     .section h2{
     	margin-bottom: 0;
